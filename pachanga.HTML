@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Pachanga - Licores, Cervezas y Snacks | Tienda de Barrio</title>
+  <meta name="description"
+    content="La Pachanga: tu tienda de barrio favorita. Amplia variedad de licores, ron, aguardiente, cervezas, snacks y buena música. ¡Visítanos!">
+  <link rel="canonical" href="https://lapachanga.com">
+  <meta property="og:title" content="La Pachanga - Licores, Cervezas y Snacks | Tienda de Barrio">
+  <meta property="og:description"
+    content="La Pachanga: tu tienda de barrio favorita. Amplia variedad de licores, ron, aguardiente, cervezas, snacks y buena música. ¡Visítanos!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lapachanga.com">
+  <meta property="og:image" content="https://lapachanga.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="La Pachanga - Licores, Cervezas y Snacks">
+  <meta name="twitter:description" content="Tu tienda de barrio favorita con licores, cervezas, snacks y buena música.">
+  <meta name="twitter:image" content="https://lapachanga.com/twitter-image.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- stripped-external-script --></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'lime': '#32CD32',
+            'dark': '#000000'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-black text-white">
+  <header class="bg-black text-white shadow-lg sticky top-0 z-50 border-b border-lime-500">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-lime-500 rounded-full flex items-center justify-center">
+            <i data-lucide="music" class="w-6 h-6 text-black"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-lime-500">La Pachanga</h2>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#licores" class="hover:text-lime-500 transition-colors">Licores</a>
+          <a href="#cervezas" class="hover:text-lime-500 transition-colors">Cervezas</a>
+          <a href="#snacks" class="hover:text-lime-500 transition-colors">Snacks</a>
+          <a href="#ofertas" class="hover:text-lime-500 transition-colors">Ofertas</a>
+          <a href="#ubicacion" class="hover:text-lime-500 transition-colors">Ubicación</a>
+          <a href="#contacto" class="hover:text-lime-500 transition-colors">Contacto</a>
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <button class="bg-lime-500 text-black px-6 py-2 rounded-lg font-semibold hover:bg-lime-400 transition-colors">
+            Visítanos
+          </button>
+          <button class="md:hidden text-white">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="min-h-screen">
+      <section class="relative min-h-screen bg-gradient-to-br from-lime-400 via-lime-500 to-green-600 overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div
+          class="relative z-10 container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center justify-between min-h-screen">
+          <div class="lg:w-1/2 text-center lg:text-left mb-12 lg:mb-0">
+            <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">La Pachanga</h1>
+            <p class="text-xl lg:text-2xl text-white/90 mb-8 font-medium">Tu tienda de barrio con la mejor selección de
+              licores, snacks y buena música</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"><button
+                class="bg-black text-lime-400 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-900 transition-colors duration-300 shadow-lg">Visita
+                Nuestra Tienda</button><button
+                class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-lime-600 transition-colors duration-300">Ver
+                Productos</button></div>
+          </div>
+          <!--   <div class="lg:w-1/2 relative"><img data-ai="generate" data-slot="hero-main"
+              data-prompt="Colorful liquor store interior with neon lights, bottles of rum and aguardiente, music speakers, lime green and black color scheme, vibrant atmosphere"
+              data-ar="4:3"
+              src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/eb305a1f-4fd5-4420-a928-3e4e945de403/eb305a1f-4fd5-4420-a928-3e4e945de403/hero/hero-main-eb84cce7e196483ab7f924c81737d33b.png"
+              alt="Interior de La Pachanga con licores y ambiente musical" width="800" height="600"
+              class="w-full rounded-2xl object-cover shadow-2xl" loading="lazy" decoding="async" fetchpriority="high" />
+            <div class="absolute -bottom-6 -left-6 bg-black/80 backdrop-blur-sm rounded-xl p-4"><img data-ai="generate"
+                data-slot="hero-products"
+                data-prompt="Assorted bottles of rum, colored aguardiente (blue, yellow, green), beer bottles arranged attractively with lime green lighting"
+                data-ar="16:9"
+                src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/eb305a1f-4fd5-4420-a928-3e4e945de403/eb305a1f-4fd5-4420-a928-3e4e945de403/hero/hero-products-e395ac567bc04d878bc6adbfe348b4cc.png"
+                alt="Variedad de licores de La Pachanga" width="320" height="180" class="w-80 rounded-lg object-cover"
+                loading="lazy" decoding="async" fetchpriority="auto" /></div>
+          </div> -->
+          <div class="relative w-full max-w-2xl overflow-hidden rounded-2xl shadow-lg">
+
+            <!-- Slides -->
+            <div id="slider" class="flex transition-transform duration-500">
+              <div class="min-w-full   text-white p-20 text-center text-2xl"><img src="images/guaro7.jpg" alt=""
+                  class="w-full h-[374px] object-cover"></div>
+              <div class="min-w-full text-white p-20 text-center text-2xl"><img src="images/guaro3.jpg" alt=""
+                  class="w-full h-[374px] object-cover">
+              </div>
+              <div class="min-w-full  text-white p-20 text-center text-2xl"><img src="images/guaro4.jpg" alt=""
+                  class="w-full h-[374px] object-cover"></div>
+              <div class="min-w-full  text-white p-20 text-center text-2xl"><img src="images/guaro.jpg" alt=""
+                  class="w-full h-[374px] object-cover"></div>
+            </div>
+
+            <!-- Botones -->
+            <button onclick="prevSlide()"
+              class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full">
+              ‹
+            </button>
+            <button onclick="nextSlide()"
+              class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full">
+              ›
+            </button>
+
+          </div>
+
+          <script>
+            let currentIndex = 0;
+            const slider = document.getElementById('slider');
+            const totalSlides = slider.children.length;
+
+            function updateSlide() {
+              slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            function nextSlide() {
+              currentIndex = (currentIndex + 1) % totalSlides;
+              updateSlide();
+            }
+
+            function prevSlide() {
+              currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+              updateSlide();
+            }
+
+            // Auto play (opcional)
+            setInterval(nextSlide, 3000);
+          </script>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 animate-bounce"><svg
+            class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3">
+            </path>
+          </svg></div>
+      </section>
+    </section>
+
+    <section id="licores" class="py-16">
+      <section class="py-20 bg-lime-500">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">Nuestros Licores Estrella</h2>
+            <p class="text-xl text-white/80 max-w-3xl mx-auto">Descubre nuestra selección premium de rones, aguardientes
+              y cervezas que hacen de cada momento una verdadera pachanga</p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+            <div
+              class="bg-black rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-lime-500">
+              <img data-ai="generate" data-slot="products-licores"
+                data-prompt="Premium rum bottles display with golden lighting, various rum brands, elegant presentation in liquor store setting"
+                data-ar="4:3"
+                src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/eb305a1f-4fd5-4420-a928-3e4e945de403/eb305a1f-4fd5-4420-a928-3e4e945de403/products/products-licores-3fb45c0e5154400385ea6d300cd7acd2.png"
+                alt="Selección de rones premium" width="400" height="300" class="w-full h-64 object-cover"
+                loading="lazy" decoding="async" fetchpriority="auto" />
+              <div class="p-6">
+                <h3 class="text-2xl font-bold text-white mb-3">Rones Premium</h3>
+                <p class="text-gray-300 mb-4">Los mejores rones nacionales e importados para los verdaderos conocedores
+                </p>
+                <div class="flex items-center justify-between"><span class="text-lime-500 font-bold text-lg">Desde
+                    $25.000</span><button
+                    class="bg-lime-500 text-black px-4 py-2 rounded-lg hover:bg-lime-400 transition-colors font-semibold">Ver
+                    Más</button></div>
+              </div>
+            </div>
+            <div
+              class="bg-black rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-lime-500">
+              <img data-ai="generate" data-slot="products-cervezas"
+                data-prompt="Cold beer bottles and cans variety, different brands, ice, refreshing presentation with lime green accents"
+                data-ar="4:3"
+                src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/eb305a1f-4fd5-4420-a928-3e4e945de403/eb305a1f-4fd5-4420-a928-3e4e945de403/products/products-cervezas-22e1f2d8e6744aa482050d5aeade6fee.png"
+                alt="Variedad de cervezas frías" width="400" height="300" class="w-full h-64 object-cover"
+                loading="lazy" decoding="async" fetchpriority="auto" />
+              <div class="p-6">
+                <h3 class="text-2xl font-bold text-white mb-3">Cervezas Frías</h3>
+                <p class="text-gray-300 mb-4">Siempre heladas y listas para acompañar tu música favorita</p>
+                <div class="flex items-center justify-between"><span class="text-lime-500 font-bold text-lg">Desde
+                    $3.500</span><button
+                    class="bg-lime-500 text-black px-4 py-2 rounded-lg hover:bg-lime-400 transition-colors font-semibold">Ver
+                    Más</button></div>
+              </div>
+            </div>
+            <div
+              class="bg-black rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-lime-500">
+              <img data-ai="generate" data-slot="products-aguardiente"
+                data-prompt="Colorful aguardiente bottles in blue, yellow, green colors, traditional Colombian liquor display, vibrant presentation"
+                data-ar="4:3"
+                src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/eb305a1f-4fd5-4420-a928-3e4e945de403/eb305a1f-4fd5-4420-a928-3e4e945de403/products/products-aguardiente-a20dbe130dee45759e8bab6ef4dbffad.png"
+                alt="Aguardientes de colores" width="400" height="300" class="w-full h-64 object-cover" loading="lazy"
+                decoding="async" fetchpriority="auto" />
+              <div class="p-6">
+                <h3 class="text-2xl font-bold text-white mb-3">Aguardientes</h3>
+                <p class="text-gray-300 mb-4">Azul, amarillo, verde... todos los sabores para tu celebración</p>
+                <div class="flex items-center justify-between"><span class="text-lime-500 font-bold text-lg">Desde
+                    $18.000</span><button
+                    class="bg-lime-500 text-black px-4 py-2 rounded-lg hover:bg-lime-400 transition-colors font-semibold">Ver
+                    Más</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="cervezas" class="py-16 bg-black">
+      <section class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">Todas Nuestras Categorías</h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">Desde licores hasta snacks, tenemos todo lo que necesitas
+              para tu pachanga perfecta</p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="group cursor-pointer">
+              <div
+                class="bg-gradient-to-br from-green-500 to-green-800 rounded-2xl p-8 text-center hover:scale-105 transition-transform duration-300">
+                <img data-ai="generate" data-slot="category-licores"
+                  data-prompt="Liquor bottles collection, rum, whiskey, vodka, aguardiente, premium spirits display with dramatic lighting"
+                  data-ar="1:1"
+                  src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/eb305a1f-4fd5-4420-a928-3e4e945de403/eb305a1f-4fd5-4420-a928-3e4e945de403/categories/category-licores-17b6d7480c2f461db341d5315213a858.png"
+                  alt="Categoría de licores" width="300" height="300"
+                  class="w-32 h-32 mx-auto mb-6 rounded-full object-cover border-4 border-white shadow-lg"
+                  loading="lazy" decoding="async" fetchpriority="auto" />
+                <h3 class="text-2xl font-bold text-black mb-4">Licores</h3>
+                <p class="text-black/80 mb-6">Ron, whiskey, vodka, aguardiente y más</p><button
+                  class="bg-black text-lime-400 px-6 py-3 rounded-full font-bold hover:bg-gray-900 transition-colors">Explorar</button>
+              </div>
+            </div>
+            <div class="group cursor-pointer">
+              <div
+                class="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl p-8 text-center hover:scale-105 transition-transform duration-300">
+                <img data-ai="generate" data-slot="category-snacks"
+                  data-prompt="Snacks variety display, Doritos, natural chips, cheese snacks, colorful packaging, convenience store setup"
+                  data-ar="1:1"
+                  src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/eb305a1f-4fd5-4420-a928-3e4e945de403/eb305a1f-4fd5-4420-a928-3e4e945de403/categories/category-snacks-9cd2c0e7e8b74cbe8462aec6b73ef1fc.png"
+                  alt="Categoría de snacks" width="300" height="300"
+                  class="w-32 h-32 mx-auto mb-6 rounded-full object-cover border-4 border-white shadow-lg"
+                  loading="lazy" decoding="async" fetchpriority="auto" />
+                <h3 class="text-2xl font-bold text-black mb-4">Snacks</h3>
+                <p class="text-black/80 mb-6">Doritos, papas, boliquesos y más</p><button
+                  class="bg-black text-yellow-400 px-6 py-3 rounded-full font-bold hover:bg-gray-900 transition-colors">Explorar</button>
+              </div>
+            </div>
+            <div class="group cursor-pointer">
+              <div
+                class="bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl p-8 text-center hover:scale-105 transition-transform duration-300">
+                <img data-ai="generate" data-slot="category-bebidas"
+                  data-prompt="Soft drinks and beverages display, soda bottles, energy drinks, juices, refrigerated drinks section"
+                  data-ar="1:1"
+                  src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/eb305a1f-4fd5-4420-a928-3e4e945de403/eb305a1f-4fd5-4420-a928-3e4e945de403/categories/category-bebidas-a62eadb2ead14c93940f195062424400.png"
+                  alt="Categoría de bebidas" width="300" height="300"
+                  class="w-32 h-32 mx-auto mb-6 rounded-full object-cover border-4 border-white shadow-lg"
+                  loading="lazy" decoding="async" fetchpriority="auto" />
+                <h3 class="text-2xl font-bold text-white mb-4">Gaseosas</h3>
+                <p class="text-white/80 mb-6">Refrescos, jugos y bebidas frías</p><button
+                  class="bg-white text-blue-600 px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">Explorar</button>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-16">
+            <div class="inline-flex items-center gap-4 bg-lime-500 text-black px-8 py-4 rounded-full font-bold text-lg">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+              </svg><span class="text-white">¡Con la mejor música para tu pachanga!</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="snacks" class="py-16 bg-black">
+      <!-- SECTION:features -->
+    </section>
+
+    <section id="ofertas" class="py-16 bg-black border-t border-lime-500">
+      <!-- SECTION:testimonials -->
+    </section>
+
+    <section id="ubicacion" class="py-16 bg-lime-500">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">Nuestra Ubicación</h2>
+          <p class="text-xl text-white/80 max-w-3xl mx-auto">Visítanos en calle 104 A #76-35. Estamos aquí para
+            servirte.</p>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg border border-black">
+          <div id="map" class="w-full h-full"><iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.699734372472!2d-75.577335924184!3d6.303126325683301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442ed8868c4ff3%3A0x77b002905e0f0da6!2sCra.%2076a%20%23%20104-20%2C%20Santander%2C%20Medell%C3%ADn%2C%20Doce%20de%20Octubre%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1775684631451!5m2!1ses!2sco"
+              width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </div>
+        <div class="mt-8 bg-black rounded-2xl p-8 border border-lime-500">
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="flex justify-center mb-4">
+                <i data-lucide="map-pin" class="w-8 h-8 text-lime-500"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Dirección</h3>
+              <p class="text-gray-300">Calle 104 A #76-35</p>
+            </div>
+            <div class="text-center">
+              <div class="flex justify-center mb-4">
+                <i data-lucide="phone" class="w-8 h-8 text-lime-500"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Teléfono</h3>
+              <p class="text-gray-300">+57 123 456 7890</p>
+            </div>
+            <div class="text-center">
+              <div class="flex justify-center mb-4">
+                <i data-lucide="clock" class="w-8 h-8 text-lime-500"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Horario</h3>
+              <p class="text-gray-300">Lun - Dom: 8AM - 10PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="py-16 bg-lime-500">
+      <section class="bg-gradient-to-br from-lime-500 to-lime-600 py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div class="bg-black/10 backdrop-blur-sm rounded-3xl p-8 md:p-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+              ¡Vive la experiencia completa en La Pachanga!
+            </h2>
+            <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
+              Donde los mejores licores se encuentran con la música perfecta. Tu tienda de barrio favorita te espera.
+            </p>
+
+            <div class="mb-10">
+              <img data-ai="generate" data-slot="cta-celebration"
+                data-prompt="Celebración en tienda de licores con botellas de ron, aguardiente, cervezas, snacks y música, ambiente festivo con colores verde lima y negro"
+                data-ar="16:9"
+                src="https://cdn.ailandingpage.ai/landingpage_io/user-generate/eb305a1f-4fd5-4420-a928-3e4e945de403/eb305a1f-4fd5-4420-a928-3e4e945de403/cta/cta-celebration-11e19068feb84280a3f62045c114af7e.png"
+                alt="Celebración en La Pachanga con licores y música" width="1200" height="675"
+                class="w-full rounded-2xl object-cover shadow-2xl" loading="lazy" decoding="async"
+                fetchpriority="auto" />
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="#ubicacion"
+                class="bg-black text-lime-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-black/90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Visítanos Ahora
+              </a>
+              <a href="tel:+57"
+                class="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Llámanos
+              </a>
+            </div>
+
+            <div class="mt-8 flex flex-wrap justify-center gap-6 text-white">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="font-medium">Tu barrio favorito</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="font-medium">Calidad garantizada</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd"
+                    d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z"
+                    clip-rule="evenodd"></path>
+                </svg>
+                <span class="font-medium">Buena música siempre</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="bg-black text-white py-12 border-t border-lime-500">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <div class="w-8 h-8 bg-lime-500 rounded-full flex items-center justify-center">
+              <i data-lucide="music" class="w-5 h-5 text-black"></i>
+            </div>
+            <h3 class="text-xl font-bold text-lime-500">La Pachanga</h3>
+          </div>
+          <p class="text-gray-300 mb-4">Tu tienda de barrio favorita donde encuentras los mejores licores, cervezas,
+            snacks y buena música.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-lime-500">
+              <i data-lucide="facebook" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-lime-500">
+              <i data-lucide="instagram" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-lime-500">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-lime-500 mb-4">Productos</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="#licores" class="hover:text-lime-500">Licores</a></li>
+            <li><a href="#cervezas" class="hover:text-lime-500">Cervezas</a></li>
+            <li><a href="#snacks" class="hover:text-lime-500">Snacks</a></li>
+            <li><a href="#ofertas" class="hover:text-lime-500">Ofertas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-lime-500 mb-4">Contacto</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-center space-x-2">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+              <span>Calle 104 A #76-35</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              <span>+57 123 456 7890</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i data-lucide="clock" class="w-4 h-4"></i>
+              <span>Lun - Dom: 8AM - 10PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-lime-500 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 La Pachanga. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function initMap() {
+      const location = { lat: 4.7110, lng: -74.0721 };
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: location,
+        mapTypeControl: false,
+        fullscreenControl: false
+      });
+
+      new google.maps.Marker({
+        position: location,
+        map: map,
+        title: 'La Pachanga - Calle 104 A #76-35'
+      });
+    }
+
+    window.addEventListener('load', initMap);
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
