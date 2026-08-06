@@ -21,11 +21,11 @@
         "baseURL": "http://localhost:11434/v1"
       },
       "models": {
-        "qwen3.5:4b": {
-          "name": "qwen3.5:4b"
+        "qwen2.5-coder:7b": {
+          "name": "qwen2.5-coder:7b"
         },
-        "gemma4:latest": {
-          "name": "gemma4:latest"
+        "llama3.1:8b": {
+          "name": "llama3.1:8b"
         }
       }
     }
