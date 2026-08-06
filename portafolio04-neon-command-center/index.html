@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRISTIAN TORRES — FULL STACK DEV · Command Center</title>
+  <meta name="description" content="Portafolio tipo Command Center de Cristian Torres, Full Stack Developer. Navegación por pestañas." />
+  <meta name="theme-color" content="#0B0F19" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Fondo animado sutil -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <div class="app">
+    <!-- TOP TAB BAR -->
+    <header class="topbar">
+      <div class="brand"><span class="brand-dot"></span> cristian<span class="accent">.torres</span> <span class="brand-tag">// full-stack</span></div>
+<nav class="tabs" id="tabs" role="tablist" aria-label="Navegación">
+        <button class="tab active" id="tab-home" role="tab" aria-selected="true" aria-controls="pan-about">00 · Inicio</button>
+        <button class="tab" id="tab-stack" role="tab" aria-selected="false" aria-controls="pan-stack">01 · Stack</button>
+        <button class="tab" id="tab-projects" role="tab" aria-selected="false" aria-controls="pan-projects">02 · Proyectos</button>
+        <button class="tab" id="tab-experience" role="tab" aria-selected="false" aria-controls="pan-experience">03 · Experiencia</button>
+        <button class="tab" id="tab-contact" role="tab" aria-selected="false" aria-controls="pan-contact">04 · Contacto</button>
+      </nav>
+      <a class="cta" href="#" data-goto="contact">Hablemos ▸</a>
+    </header>
+
+    <!-- PANEL ACTIVO -->
+    <main id="panels" class="panels" role="tabpanel" aria-live="polite">
+      <section class="panel active" id="pan-about">
+        <div class="about">
+          <div class="kicker">DISPOSITIVO VERIFICADO · ID CT-0727</div>
+          <h1 class="title">Cristian <span class="accent-line">Torres</span></h1>
+          <div class="role-line">Full Stack Developer · PHP · WordPress · React</div>
+          <p class="lede">
+            Más de <b>10 años</b> creando aplicaciones web y APIs REST que funcionan cuando deben.
+            Equipos multidisciplinarios, todas las etapas: análisis, diseño, implementación, despliegue y mantenimiento.
+          </p>
+          <div class="pills">
+            <span class="pi">IA estratégica</span>
+            <span class="pi">Arquitectura modular</span>
+            <span class="pi">APIs escalables</span>
+          </div>
+          <div class="about-actions">
+            <button class="btn-solid" data-goto="projects">Ver proyectos</button>
+            <button class="btn-ghost" data-goto="contact">Descargar CV ▸</button>
+          </div>
+          <div class="metrics" id="metrics">
+            <div class="metric"><span class="m-val" data-count="10">0</span><span class="m-lab">+ años de experiencia</span></div>
+            <div class="metric"><span class="m-val" data-count="40">0</span><span class="m-lab">proyectos</span></div>
+            <div class="metric"><span class="m-val" data-count="80">0</span><span class="m-lab">rendimiento +60%</span></div>
+            <div class="metric"><span class="m-val" data-count="20">0</span><span class="m-lab">reducción de carga (%)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="pan-stack">
+        <div class="panel-head"><h2>Stack tecnológico</h2><p>Las herramientas con las que resuelvo problemas.</p></div>
+        <div id="stackGrid" class="stack-grid"></div>
+      </section>
+
+      <section class="panel" id="pan-projects">
+        <div class="panel-head"><h2>Proyectos destacados</h2><p>De la idea al deployment, con impacto medible.</p></div>
+        <div id="projGrid" class="proj-grid"></div>
+      </section>
+
+      <section class="panel" id="pan-experience">
+        <div class="panel-head"><h2>Experiencia</h2><p>El camino hasta Full Stack.</p></div>
+        <div id="expList" class="exp-list"></div>
+        <div class="edu" id="edu"></div>
+      </section>
+
+      <section class="panel" id="pan-contact">
+        <div class="panel-head"><h2>Contacto</h2><p>Elegí el canal que prefieres.</p></div>
+        <div id="contactGrid" class="contact-grid"></div>
+        <div class="contact-note">📍 Medellín, Colombia · Disponible remoto / híbrido</div>
+      </section>
+    </main>
+
+    <!-- STATUS BAR -->
+    <footer class="statusbar">
+      <span class="dot ok"></span><span class="ok">SYSTEM ONLINE</span>
+      <span class="sep">·</span><span id="sbClock">00:00:00</span>
+      <span class="spacer"></span>
+      <span>CRISTIAN TORRES · © 2026</span>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
