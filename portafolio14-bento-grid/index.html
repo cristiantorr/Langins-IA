@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bento — Cristian Torres · Full Stack</title>
+  <meta name="description" content="Portafolio bento grid de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#F4F5F9" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">cristian<span class="accent">@</span>torres<span class="cursor">_</span></div>
+    <nav class="nav">
+      <button class="n active" data-view="home">Inicio</button>
+      <button class="n" data-view="stack">Stack</button>
+      <button class="n" data-view="projects">Proyectos</button>
+      <button class="n" data-view="experience">Experiencia</button>
+      <button class="n" data-view="contact">Contacto</button>
+    </nav>
+  </header>
+
+  <main class="stage">
+    <section class="bento panel active" data-view="home">
+      <div class="cell hero">
+        <div class="hero-photo"><img id="portrait" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Cristian Torres" /></div>
+        <div class="hero-text">
+          <span class="tag">FULL STACK · 10+ AÑOS</span>
+          <h1>Cristian Torres</h1>
+          <p>Construyo web que <b>escala</b> y <b>vende</b>. PHP, WordPress, React y AWS desde Medellín.</p>
+          <button class="btn" data-view="projects">Ver proyectos →</button>
+        </div>
+      </div>
+      <div class="cell stats">
+        <div class="stat"><b>10+</b><span>años de experiencia</span></div>
+        <div class="stat"><b>20+</b><span>proyectos en producción</span></div>
+      </div>
+      <div class="cell accent1 mini clickable" data-view="stack" title="Ver stack">
+        <div class="mini-label">STACK</div>
+        <div class="mini-specs">PHP · React · Node · AWS</div>
+      </div>
+      <div class="cell accent2 mini clickable" data-view="projects" title="Ver proyectos">
+        <div class="mini-label">PROYECTOS</div>
+        <div class="mini-specs">Dashboard · Plugins · Ecommerce</div>
+      </div>
+      <div class="cell tall clickable" data-view="contact" title="Contactar">
+        <div class="mini-label">DISPO. PARA CONTRATAR</div>
+        <div class="mini-cta">Hablemos →</div>
+      </div>
+      <div class="cell quote">
+        <p>“Menos código parásito. Más <b>producto que rinde</b>.”</p>
+      </div>
+    </section>
+
+    <section class="bento" data-view="stack"><div class="cell wide-title"><h2>Stack técnico</h2></div><div class="cell wide" id="stackGrid"></div></section>
+    <section class="bento" data-view="projects"><div class="cell wide-title"><h2>Proyectos</h2></div><div class="cell wide" id="projGrid"></div></section>
+    <section class="bento" data-view="experience"><div class="cell wide-title"><h2>Experiencia</h2></div><div class="cell wide" id="timeline"></div></section>
+    <section class="bento" data-view="contact"><div class="cell wide-title"><h2>Contacto</h2></div><div class="cell wide" id="contactGrid"></div></section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
