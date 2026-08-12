@@ -1,0 +1,31 @@
+# ACTÚA COMO
+Eres un Ingeniero de Frontend Senior y Diseñador UX/UI especializado en crear experiencias web inmersivas y PWAs (Progressive Web Apps) para perfiles tecnológicos de alto nivel.
+
+# CONTEXTO DEL PROYECTO
+Necesito diseñar y codificar 5 propuestas diferentes de un portafolio web para un Desarrollador Web. Este portafolio está dirigido exclusivamente a RECLUTADORES TÉCNICOS y Gerentes de Ingeniería. Debe demostrar habilidades técnicas avanzadas en HTML, CSS tailwind y JavaScript puro (o con librerías ligeras), junto con una sensibilidad de diseño excepcional.
+
+# FILOSOFÍA DE DISEÑO Y UX (CRÍTICO)
+1. Estética: El tema debe ser "Matrix", "Cyberpunk", "Cibernético" o "Terminal Informática Retro". Debe verse tecnológico, 'hacker', y avanzado. Usa colores oscuros, neones (verde Matrix, azul ciber, cian), tipografías monoespaciadas y elementos gráficos digitales.
+2. Usabilidad para Reclutadores: A pesar de la estética, la LEGIBILIDAD DEBE SER PRIORIDAD ABSOLUTA. El reclutador debe encontrar la información (Experiencia, Proyectos, Stack) en menos de 10 segundos.
+3. Restricción de Navegación: NO USAR SCROLL VERTICAL TRADICIONAL. El portafolio debe caber en una sola pantalla (viewport size). Para organizar el contenido, usa un sistema de TABS, NAVEGACIÓN LATERAL FIXED, o PANELES DESLIZANTES JS. La sensación debe ser la de operar una interfaz de una nave espacial o una terminal, no leer un artículo de blog.
+
+# REQUERIMIENTOS TÉCNICOS Y ESTRUCTURA
+*   Stack: HTML5 semántico, CSS3 tailwind(Grid/Flexbox, variables, animaciones) y JavaScript vanilla (para la lógica de tabs y animaciones). Si recomiendas una librería muy ligera para animaciones (ej. GSAP.js), inclúyela vía CDN.
+*   PWA: Asegúrate de mencionar la estructura básica para convertirlo en PWA (manifest, service worker básico).
+*   Secciones obligatorias por propuesta (contenidas en tabs/paneles):
+    1.  Hero/Identidad (Nombre, Título: "Full Stack Dev", CTA Contacto).
+    2.  Stack Tecnológico (Iconos/Logos y nivel).
+    3.  Proyectos Destacados (3-4 máximo, con links a Demo/Code).
+    4.  Experiencia/CV Resumido.
+    5.  Contacto/Links (GitHub, LinkedIn).
+
+# ENTREGABLE ESPERADO
+Por favor, genera 5 propuestas conceptuales detalladas. Para cada propuesta necesito:
+1.  **Nombre Conceptual** (ej. "The Matrix Terminal").
+2.  **Descripción del Flujo UX/UI** (Cómo se evitan el scroll y cómo funcionan los tabs/paneles).
+3.  **Paleta de Colores y Tipografía**.
+4.  **Efectos y Animaciones Clave en JS/CSS** (ej. efecto de lluvia de código, glitches, neones pulsantes).
+5.  **Estructura de Código HTML/CSS/JS Básica** (un esqueleto funcional inicial para entender la navegación de la propuesta).
+6.  **Cada propuesta debe ir en la carpeta "landings-portafolios", cada propuesta por separada con sus recursos en una carpeta(ej. portafolio01, portafolio02)
+
+---
