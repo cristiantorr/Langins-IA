@@ -1,0 +1,108 @@
+/* ===== DOCK LAUNCHER — style.css ===== */
+:root {
+  --ink: #1C2534;
+  --muted: #5B6574;
+  --glass: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.9);
+  --blue: #4C7DF0;
+  --violet: #7B61FF;
+  --teal: #18BFA8;
+  --amber: #F2A33C;
+  --rose: #F05C7A;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+body { font-family: "Inter", system-ui, sans-serif; color: var(--ink); user-select: none; }
+
+/* ---------- Desktop ---------- */
+.desktop-fx { position: fixed; inset: 0; z-index: 0;
+  background:
+    radial-gradient(600px 400px at 18% 20%, rgba(124, 97, 255, 0.20), transparent 60%),
+    radial-gradient(600px 420px at 85% 30%, rgba(76, 125, 240, 0.22), transparent 60%),
+    radial-gradient(500px 360px at 60% 88%, rgba(24, 191, 168, 0.18), transparent 60%),
+    linear-gradient(160deg, #E9EDF5 0%, #DCE3F0 100%);
+}
+.desktop { position: fixed; inset: 0; z-index: 1; padding: 0 26px; display: flex; align-items: flex-start; justify-content: flex-start; }
+.welcome { margin-top: 9vh; padding: 22px 28px; background: rgba(255,255,255,0.55); border: 1px solid var(--glass-border); border-radius: 16px; max-width: 460px; backdrop-filter: blur(6px); box-shadow: 0 10px 30px rgba(30,40,70,0.12); }
+.welcome-text { font-family: "Space Grotesk", sans-serif; font-size: 24px; font-weight: 600; color: var(--ink); letter-spacing: -0.5px; }
+.welcome-text b { color: var(--blue); }
+.welcome-sub { color: var(--muted); font-size: 13.5px; line-height: 1.6; margin-top: 6px; }
+
+/* ---------- Menubar ---------- */
+.menubar { position: fixed; top: 0; left: 0; right: 0; z-index: 20; height: 40px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; background: rgba(255,255,255,0.6); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.7); font-size: 12.5px; color: var(--ink); font-weight: 500; }
+.menubar .apple { font-size: 16px; margin-right: 6px; }
+.menuright { display: flex; gap: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* ---------- Dock ---------- */
+.dock { position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%); z-index: 20; display: flex; align-items: flex-end; gap: 10px; padding: 12px 14px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 22px; backdrop-filter: blur(12px); box-shadow: 0 18px 40px rgba(20,30,60,0.18); }
+.dockwrap { display: flex; align-items: flex-end; gap: 12px; }
+.dock-item { position: relative; display: flex; flex-direction: column; align-items: center; width: 56px; cursor: pointer; }
+.dock-item .ico { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 -2px 4px rgba(0,0,0,0.08), 0 6px 14px rgba(20,30,60,0.22); transform-origin: bottom center; transition: none; }
+.dock-item svg { width: 28px; height: 28px; }
+.dock-item .lbl { margin-top: 6px; font-size: 10.5px; font-weight: 600; color: #374151; letter-spacing: .2px; white-space: nowrap; opacity: 0; transform: translateY(3px); transition: all .2s; }
+.dock-item:hover .lbl { opacity: 1; transform: none; }
+
+/* ---------- Overlay + window ---------- */
+.overlay { position: fixed; inset: 0; z-index: 30; background: rgba(20,28,48,0.42); backdrop-filter: blur(3px); opacity: 0; pointer-events: none; transition: opacity .25s; }
+.overlay.open { opacity: 1; pointer-events: auto; }
+.win { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(0.94); z-index: 40; width: min(680px, calc(100% - 40px)); max-height: 76vh; overflow: auto; background: #fff; border-radius: 18px; box-shadow: 0 30px 80px rgba(10,18,40,0.4); opacity: 0; pointer-events: none; transform-origin: center; transition: opacity .25s ease, transform .25s ease; }
+.win.open { opacity: 1; pointer-events: auto; transform: translate(-50%, -50%) scale(1); }
+.win-head { display: flex; align-items: center; gap: 10px; padding: 14px 18px; border-bottom: 1px solid #EEF1F6; position: sticky; top: 0; background: rgba(255,255,255,0.92); backdrop-filter: blur(6px); }
+.win-head .traffic { display: flex; gap: 7px; }
+.win-head .traffic span { width: 12px; height: 12px; border-radius: 50%; }
+.t-red { background: #FF5F57; } .t-yellow { background: #FEBC2E; } .t-green { background: #28C840; }
+.win-head .wtitle { font-family: "Space Grotesk", sans-serif; font-weight: 600; font-size: 14px; color: var(--ink); }
+.win-head .close { margin-left: auto; padding: 4px 10px; font-size: 12px; cursor: pointer; color: var(--muted); border: 1px solid #E3E7F0; border-radius: 6px; background: #fff; }
+.win-head .close:hover { color: #fff; background: var(--rose); }
+.win-body { padding: 22px 26px 28px; }
+
+/* Word bbox for stacked info */
+.win-body h2 { font-family: "Space Grotesk", sans-serif; font-size: 22px; color: var(--ink); }
+.win-body h3 { font-size: 14px; font-weight: 700; color: var(--ink); }
+
+/* Photo window */
+.identity-row { display: flex; gap: 22px; align-items: flex-start; flex-wrap: wrap; }
+.ident-photo { width: 150px; height: 180px; border-radius: 14px; overflow: hidden; border: 1px solid #E3E7F0; flex: none; }
+.ident-photo img { width: 100%; height: 100%; object-fit: cover; }
+.ident-body h1 { font-family: "Space Grotesk", sans-serif; font-size: 26px; color: var(--ink); margin: 0 0 4px; }
+.ident-body .sub { color: var(--blue); font-weight: 600; margin-bottom: 10px; }
+.ident-body p { color: var(--muted); font-size: 13.5px; line-height: 1.65; margin: 0 0 14px; max-width: 40ch; }
+.chip-set { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip-set span { font-size: 12px; font-weight: 600; color: var(--blue); background: #EFF3FF; padding: 5px 12px; border-radius: 20px; }
+
+/* Sections state in windows */
+.stack-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+.sblock { background: #F7F9FC; border: 1px solid #E7EBF3; border-radius: 12px; padding: 16px; }
+.sblock h3 { font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink); margin: 0 0 12px; }
+.skill-name { display: flex; justify-content: space-between; font-size: 13px; font-weight: 500; }
+.skill-name span:last-child { color: var(--blue); font-weight: 600; }
+.bar { height: 7px; background: #E7EBF3; border-radius: 5px; overflow: hidden; margin: 5px 0 12px; }
+.proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.proj-card { background: #F7F9FC; border: 1px solid #E7EBF3; border-radius: 12px; padding: 16px; }
+.proj-card h3 { margin: 0 0 6px; font-family: "Space Grotesk", sans-serif; font-size: 16px; }
+.proj-card p { color: var(--muted); font-size: 13px; min-height: 52px; margin: 0 0 10px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags span { font-size: 11px; font-weight: 600; color: var(--teal); background: #E5F8F5; padding: 3px 10px; border-radius: 20px; }
+.timeline { display: flex; flex-direction: column; gap: 16px; }
+.tl { border-left: 3px solid var(--blue); padding-left: 16px; }
+.tl .role { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 16px; }
+.tl .org { color: var(--blue); font-weight: 600; }
+.tl .dates { color: var(--muted); font-size: 12.5px; }
+.tl ul { color: var(--muted); font-size: 13.5px; padding-left: 18px; }
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.hc { display: block; background: #F7F9FC; border: 1px solid #E7EBF3; border-radius: 12px; padding: 16px; text-decoration: none; color: var(--ink); }
+.hc .l { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.hc .v { margin-top: 6px; word-break: break-all; font-weight: 600; color: var(--blue); }
+
+.win::-webkit-scrollbar { width: 8px; }
+.win::-webkit-scrollbar-thumb { background: #CBD3E1; border-radius: 4px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 620px) {
+  .dock { padding: 10px; gap: 6px; }
+  .dock-item { width: 46px; }
+  .dock-item .ico { width: 46px; height: 46px; border-radius: 11px; }
+  .dock-item .ico svg { width: 24px; height: 24px; }
+  .dock-item .lbl { display: none; }
+}

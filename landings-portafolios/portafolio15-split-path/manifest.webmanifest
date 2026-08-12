@@ -1,0 +1,15 @@
+{
+  "name": "Ruta — Cristian Torres",
+  "short_name": "CT Ruta",
+  "description": "Portafolio tipo ruta dividida de Cristian Torres, Full Stack Developer.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape-primary",
+  "background_color": "#F2F4F8",
+  "theme_color": "#10141C",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

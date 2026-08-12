@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cristian Torres · Historia de un desarrollador</title>
+  <meta name="description" content="Portafolio narrativo en formato longform de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#FBF7F1" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="#inicio" class="brand">Cristian Torres <span>· Full Stack</span></a>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#historia">Historia</a>
+      <a href="#stack">Stack</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <div class="progress" id="progress"><i></i></div>
+
+  <header id="inicio" class="hero rv">
+    <span class="kicker">UNA HISTORIA DE CÓDIGO · 2014 → 2026</span>
+    <h1>He pasado <em>más de una década</em> haciendo que el software web funcione.</h1>
+    <div class="hero-meta">
+      <div class="hero-photo"><img id="portrait" src="https://randomuser.me/api/portraits/men/21.jpg" alt="Cristian Torres" /></div>
+      <p class="lede">Soy <b>Cristian Torres</b>, Full Stack Developer. PHP, WordPress, React y arquitecturas en la nube. Esto no es un currículum aburrido: es la historia de cómo construyo.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="historia" class="story rv">
+      <p class="drop">Todo empezó en 2014, entre maquetas y consultas SQL. Aprendí que el software no se termina: se <b>mejora</b>. Que una página rápida vende más, y que un buen plugin ahorra horas a un equipo entero.</p>
+      <p>Por eso hoy combino la solidez del backend con el cuidado del frontend. <em>La tecnología cambia; la disciplina del producto no.</em></p>
+      <blockquote>“No escribo código para impresionar: lo escribo para que <b>aguante</b>.”</blockquote>
+      <div class="stats" id="stats">
+        <div class="stat"><b data-count="10">0</b><span>años de experiencia</span></div>
+        <div class="stat"><b data-count="60">0</b><span>% más de rendimiento logrado</span></div>
+        <div class="stat"><b data-count="20">0</b><span>% menos de carga con ACF</span></div>
+      </div>
+    </section>
+
+    <section id="stack" class="story rv">
+      <span class="kicker">CAPÍTULO 02</span>
+      <h2 class="h2">El stack con el que trabajo.</h2>
+      <div id="stackGrid" class="grid3"></div>
+    </section>
+
+    <section id="proyectos" class="story rv">
+      <span class="kicker">CAPÍTULO 03</span>
+      <h2 class="h2">Proyectos que dejaron huella.</h2>
+      <div id="projGrid" class="proj"></div>
+    </section>
+
+    <section id="experiencia" class="story rv">
+      <span class="kicker">CAPÍTULO 04</span>
+      <h2 class="h2">Los capítulos del camino.</h2>
+      <div id="timeline" class="timeline"></div>
+    </section>
+
+    <section id="contacto" class="story end-card rv">
+      <span class="kicker">EPÍLOGO</span>
+      <h2 class="h2">Sigamos la historia juntos.</h2>
+      <p class="end-lead">Si buscas a alguien que entregue y que cuide cada detalle, escríbeme.</p>
+      <div id="contactGrid" class="contact-grid"></div>
+    </section>
+  </main>
+
+  <footer class="foot">© 2026 Cristian Torres — Hecho con paciencia de dev senior.</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

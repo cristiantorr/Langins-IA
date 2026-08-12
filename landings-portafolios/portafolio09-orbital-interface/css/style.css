@@ -1,0 +1,98 @@
+/* ===== ORBITAL INTERFACE — style.css ===== */
+:root {
+  --bg: #0A0F1E;
+  --cyan: #00E5FF;
+  --amber: #FFC93C;
+  --purple: #8B5CF6;
+  --text: #EAF2FF;
+  --muted: #7E8DB0;
+  --glow-cyan: rgba(0, 229, 255, 0.3);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+body { background: radial-gradient(1000px 700px at 50% 40%, #101733 0%, var(--bg) 60%); color: var(--text); font-family: "Exo 2", sans-serif; }
+
+.bg-stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; background-image: radial-gradient(rgba(0,229,255,0.12) 1px, transparent 1px), radial-gradient(rgba(255,201,60,0.08) 1px, transparent 1px); background-size: 70px 70px, 130px 130px; background-position: 0 0, 30px 30px; }
+
+.app { position: relative; z-index: 2; height: 100vh; display: flex; flex-direction: column; max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+
+/* ---------- Topbar ---------- */
+.topbar { display: flex; align-items: center; gap: 18px; padding: 16px 0; font-family: "Orbitron", sans-serif; font-size: 13px; }
+.brand { letter-spacing: 2px; color: var(--amber); }
+.status { margin-left: auto; color: var(--muted); font-size: 11px; display: flex; align-items: center; gap: 8px; }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 10px rgba(255,201,60,0.6); animation: pulse 1.6s infinite; }
+@keyframes pulse { 50% { opacity: 0.25; } }
+.clock { color: var(--muted); font-family: "Orbitron", sans-serif; font-size: 11px; }
+
+/* ---------- System ---------- */
+.system { flex: 1; position: relative; display: flex; align-items: center; justify-content: center; min-height: 0; }
+
+.orbit-ring { position: absolute; border: 1px dashed rgba(0,229,255,0.25); border-radius: 50%; pointer-events: none; }
+.r1 { width: 520px; height: 520px; }
+.r2 { width: 380px; height: 380px; border-style: solid; border-color: rgba(255,201,60,0.15); }
+
+/* ---------- Planetas ---------- */
+.planet { position: absolute; left: 50%; top: 50%; width: 92px; height: 92px; margin: -46px 0 0 -46px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #1b2547, #0c1226); border: 2px solid var(--cyan);
+  color: var(--cyan); cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  font-family: "Orbitron", sans-serif; transition: border-color 0.2s; z-index: 4; }
+.planet span { font-size: 22px; line-height: 1; }
+.planet i { font-style: normal; font-size: 9px; letter-spacing: 1px; }
+.planet:hover { border-color: var(--amber); color: var(--amber); }
+.planet.active { border-color: var(--amber); color: var(--amber); box-shadow: 0 0 22px rgba(255,201,60,0.4); transform: scale(1.15); }
+
+/* ---------- Núcleo ---------- */
+.core { width: 300px; height: 300px; border-radius: 50%; border: 2px solid rgba(0,229,255,0.4);
+  background: radial-gradient(circle at 40% 35%, rgba(0,229,255,0.12), rgba(10,15,30,0.9));
+  box-shadow: 0 0 60px rgba(0,229,255,0.15), inset 0 0 40px rgba(0,229,255,0.08);
+  display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+.core::after { content: ""; position: absolute; inset: 8px; border-radius: 50%; border: 1px dashed rgba(255,201,60,0.25); }
+.panel { position: absolute; inset: 0; display: none; padding: 26px; text-align: center; overflow: auto; }
+.panel.active { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+
+.sun-name { font-family: "Orbitron", sans-serif; font-weight: 900; font-size: 22px; line-height: 1.05; margin: 0 0 6px; color: var(--text); }
+.sun-role { font-family: "Orbitron", sans-serif; color: var(--cyan); font-size: 9px; letter-spacing: 3px; margin-bottom: 10px; }
+.sun-desc { color: var(--muted); font-size: 11px; line-height: 1.6; margin: 0; }
+.neb { color: var(--amber); }
+.orbit-meta { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 12px; }
+.orbit-meta span { font-family: "Orbitron", sans-serif; font-size: 8px; color: var(--cyan); border: 1px solid rgba(0,229,255,0.25); padding: 4px 8px; border-radius: 20px; }
+
+/* ---------- Contenido en núcleo ---------- */
+.panel h3 { font-size: 11px; margin: 0 0 6px; font-family: "Orbitron", sans-serif; color: var(--cyan); }
+.panel p { font-size: 10px; line-height: 1.5; color: var(--muted); margin: 0 0 6px; }
+.stack-grid { display: grid; grid-template-columns: 1fr; gap: 6px; width: 100%; }
+.sblock { border: 1px solid rgba(0,229,255,0.2); border-radius: 10px; padding: 8px 10px; }
+.sblock h3 { margin: 0 0 6px; font-size: 9px; color: var(--amber); letter-spacing: 1px; }
+.skill { margin-bottom: 4px; }
+.skill-name { display: flex; justify-content: space-between; font-size: 10px; }
+.skill-name span:last-child { color: var(--cyan); font-family: "Orbitron", sans-serif; font-size: 8px; }
+.bar { height: 4px; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
+.bar-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--cyan), var(--amber)); }
+.proj-grid { display: grid; grid-template-columns: 1fr; gap: 6px; width: 100%; }
+.proj-card { border: 1px solid rgba(255,201,60,0.25); border-radius: 10px; padding: 8px 10px; text-align: left; }
+.proj-card h3 { color: var(--amber); }
+.tags { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0; }
+.tags span { font-family: "Orbitron", sans-serif; font-size: 7px; color: var(--cyan); border: 1px solid rgba(0,229,255,0.2); padding: 2px 6px; border-radius: 10px; }
+.tline { width: 100%; text-align: left; }
+.tl { border-left: 2px solid var(--cyan); padding-left: 10px; margin-bottom: 8px; }
+.tl .role { font-family: "Orbitron", sans-serif; font-size: 9px; color: var(--cyan); }
+.tl .org { color: var(--amber); font-size: 9px; }
+.tl .dates { color: var(--muted); font-size: 8px; }
+.tl ul { list-style: none; padding: 0; margin: 4px 0 0; font-size: 9px; color: var(--muted); line-height: 1.5; }
+.contact-grid { display: grid; grid-template-columns: 1fr; gap: 6px; width: 100%; }
+.hc { border: 1px solid rgba(0,229,255,0.2); border-radius: 10px; padding: 8px 10px; text-decoration: none; color: var(--text); }
+.hc .l { font-family: "Orbitron", sans-serif; font-size: 8px; color: var(--amber); letter-spacing: 1px; }
+.hc .v { font-size: 10px; margin-top: 2px; word-break: break-all; }
+
+.panel::-webkit-scrollbar { width: 5px; }
+.panel::-webkit-scrollbar-thumb { background: rgba(0,229,255,0.3); border-radius: 3px; }
+
+@media (max-width: 620px) {
+  .r1 { width: 340px; height: 340px; }
+  .r2 { width: 260px; height: 260px; }
+  .planet { width: 66px; height: 66px; margin: -33px 0 0 -33px; }
+  .planet i { display: none; }
+  .core { width: 210px; height: 210px; }
+  .sun-name { font-size: 16px; }
+}

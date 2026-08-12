@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ruta — Cristian Torres · Full Stack</title>
+  <meta name="description" content="Portafolio tipo ruta dividida de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#F2F4F8" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="split">
+    <aside class="side-photo">
+      <div class="side-inner">
+        <div class="photo-frame">
+          <img id="portrait" src="https://randomuser.me/api/portraits/men/68.jpg" alt="Cristian Torres" />
+        </div>
+        <div class="side-name">Cristian<br />Torres</div>
+        <div class="side-role">FULL STACK DEVELOPER</div>
+        <p class="side-bio">10+ años construyendo web que escala y que se nota en los resultados. Medellín, Colombia.</p>
+        <div class="side-social">
+          <a href="mailto:ps4cristiantorr@gmail.com">EMAIL</a>
+          <a href="#">GITHUB</a>
+          <a href="#">LINKEDIN</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="side-main">
+      <div class="stepper" id="stepper"></div>
+      <div class="panels" id="panels">
+        <section class="panel active" data-step="perfil">
+          <span class="kicker">01 · PERFIL</span>
+          <h1 class="big">Hola, soy <span class="grad">Cristian</span>.</h1>
+          <p class="lede">Desarrollador <b>Full Stack</b> que une el backend sólido con un frontend cuidado. Mi foco: <b>rendimiento</b> y <b>conversión</b>.</p>
+          <ul class="ticks">
+            <li><b>+60%</b> rendimiento tras auditoría AWS.</li>
+            <li><b>−20%</b> carga con plugins ACF PRO.</li>
+            <li><b>10 años</b> en producción real.</li>
+          </ul>
+        </section>
+        <section class="panel" data-step="stack"><span class="kicker">02 · STACK</span><h2>Stack</h2><div id="stackGrid"></div></section>
+        <section class="panel" data-step="proyectos"><span class="kicker">03 · PROYECTOS</span><h2>Proyectos</h2><div id="projGrid"></div></section>
+        <section class="panel" data-step="trayectoria"><span class="kicker">04 · TRAYECTORIA</span><h2>Experiencia</h2><div id="timeline"></div></section>
+        <section class="panel" data-step="contacto"><span class="kicker">05 · CONTACTO</span><h2>Hablemos</h2><div id="contactGrid"></div></section>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

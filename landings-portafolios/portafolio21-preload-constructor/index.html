@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUILD_ · Cristian Torres</title>
+  <meta name="description" content="Portafolio Constructor de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#0A0F1E" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="locked">
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="pl-box">
+      <div class="pl-cmd">$ building portfolio...</div>
+      <div class="pl-brand"><span class="pl-b" data-t="CT">CT</span><span class="pl-b" data-t="_">_</span></div>
+      <div class="pl-bar"><i id="pl-bar"></i></div>
+      <div class="pl-pct" id="pl-pct">0%</div>
+    </div>
+  </div>
+
+  <!-- FONDO QUE SE ARMA AL SCROLL -->
+  <div class="backdrop" aria-hidden="true" id="backdrop">
+    <div class="figure" style="top:120px;left:-40px;width:250px"><span class="fig-cap">constructor</span><svg viewBox="0 0 240 140"><g fill="none" stroke="#22D8F5" stroke-width="2"><path class="fig-line" d="M20 20 H88 V120 H20 Z"/><path class="fig-line" d="M120 20 H188 V120 H120 Z"/><path class="fig-line" d="M196 20 H88"/></g><g fill="#2AF5B0" class="fig-pts"><circle class="fig-pt" cx="54" cy="70" r="3"/><circle class="fig-pt" cx="134" cy="70" r="3"/><circle class="fig-pt" cx="200" cy="70" r="3"/></g></svg></div>
+
+    <div class="figure" style="top:520px;right:-60px;width:290px"><svg viewBox="0 0 280 160"><g fill="none" stroke="#FF2E88" stroke-width="3" stroke-linecap="round"><path class="fig-line" d="M60 30 h120"/><path class="fig-line" d="M140 30 v100"/><path class="fig-line" d="M60 82 h30"/></g><g class="fig-pts"><circle class="fig-pt" r="4" cx="120" cy="70"/><circle class="fig-pt" r="4" cx="140" cy="70"/><circle class="fig-pt" r="4" cx="200" cy="80"/></g></svg></div>
+
+    <div class="figure" style="top:90px;left:46%;width:200px"><svg viewBox="0 0 180 120"><g fill="none" stroke="#22D8F5" stroke-width="3" stroke-linecap="round"><path class="fig-line" d="M30 25 h120"/><path class="fig-line" d="M30 25 h120 M30 25 v70 M150 25 v70"/></g><g class="fig-pts"><circle class="fig-pt" r="4" cx="30" cy="110"/><circle class="fig-pt" r="4" cx="150" cy="110"/></g></svg></div>
+
+    <div class="figure" style="bottom:110px;left:6%;width:230px"><span class="fig-cap">terminal</span><svg viewBox="0 0 220 150"><g fill="none" stroke="#2AF5B0" stroke-width="2"><rect class="fig-line" x="14" y="14" width="180" height="120" rx="8"/><path class="fig-line" d="M30 48 l26 26 -26 26"/><path class="fig-line" d="M70 100 h50"/></g><g class="fig-pts"><circle class="fig-pt" r="3" cx="120" cy="46"/><circle class="fig-pt" r="3" cx="160" cy="60"/></g></svg></div>
+
+    <div class="figure" style="bottom:40px;left:30%;width:200px"><svg viewBox="0 0 180 150"><g fill="none" stroke="#FF2E88" stroke-width="3" stroke-linejoin="round"><path class="fig-line" d="M90 10 172 140 H8 Z"/></g><g class="fig-pts"><circle class="fig-pt" r="4" cx="90" cy="10"/><circle class="fig-pt" r="4" cx="172" cy="140"/><circle class="fig-pt" r="4" cx="8" cy="140"/></g></svg></div>
+  </div>
+
+  <nav class="nav">
+    <div class="brand">BUILD<span>_CT</span></div>
+    <div class="links">
+      <a href="#perfil">perfil</a><a href="#stack">stack</a><a href="#proyectos">proyectos</a><a href="#camino">camino</a><a href="#contacto">contacto</a>
+    </div>
+  </nav>
+
+  <main class="flow">
+    <section id="perfil" class="sec hero">
+      <span class="k">_01 // PERFIL</span>
+      <h1>Construyo software<br />que <em>se mantiene</em>.</h1>
+      <div class="hero-grid">
+        <div class="photo"><img id="portrait" src="https://randomuser.me/api/portraits/men/17.jpg" alt="Cristian Torres" /></div>
+        <div class="hero-body">
+          <p class="lede">Soy <b>Cristian Torres</b>, Full Stack Developer con 10+ años. Del backend al frontend, entrego cosas que funcionan y que duran. PHP, React, WordPress y la nube.</p>
+          <div class="btns"><a href="#proyectos" class="btn">ver proyectos →</a><a href="#contacto" class="btn ghost">contactar</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="stack" class="sec"><span class="eyebrow">_02 — STACK</span><h2>Stack.</h2><div id="stackGrid" class="grid3"></div></section>
+  <section id="proyectos" class="sec"><span class="eyebrow">_03 — PROYECTOS</span><h2>Proyectos.</h2><div id="projGrid" class="grid3"></div></section>
+  <section id="camino" class="sec"><span class="eyebrow">_04 — CAMINO</span><h2>Camino.</h2><div id="timeline"></div></section>
+  <section id="contacto" class="sec"><span class="eyebrow">_05 — CONTACTO</span><h2>Contacto.</h2><div id="contactGrid" class="grid3"></div></section>
+
+  <footer class="foot">© 2026 Cristian Torres — build · maintain · scale</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

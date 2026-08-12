@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRISTIAN TORRES · FULL STACK DEV — NEON HOLOGRAM</title>
+  <meta name="description" content="Portafolio holográfico animado de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#0B1026" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Fondos animados -->
+  <div id="stars" aria-hidden="true"></div>
+  <div id="floaters" aria-hidden="true"></div>
+  <div class="halo"></div>
+
+  <div class="app">
+    <header class="topbar">
+      <div class="brand"><span class="h-orb"></span> HOLO//CRISTIAN</div>
+      <div class="top-status" id="clock">00:00:00</div>
+    </header>
+
+    <div class="layout">
+      <!-- Nav holográfica -->
+      <aside class="nav">
+        <button class="nav-chip active" data-view="home"><span>00</span>INICIO</button>
+        <button class="nav-chip" data-view="stack"><span>01</span>STACK</button>
+        <button class="nav-chip" data-view="projects"><span>02</span>PROYECTOS</button>
+        <button class="nav-chip" data-view="experience"><span>03</span>EXPERIENCIA</button>
+        <button class="nav-chip" data-view="contact"><span>04</span>CONTACTO</button>
+      </aside>
+
+      <!-- Panel -->
+      <main class="stage">
+        <section class="panel active" data-view="home">
+          <div class="holo-name" data-split>CRISTIAN TORRES</div>
+          <div class="holo-sub">FULL STACK DEVELOPER</div>
+          <p class="holo-desc">10+ años diseñando <i>webs</i>, plugins e integraciones <b>REST escalables</b> con PHP, WordPress y React. Tradición + IA.</p>
+          <div class="hud-line"><span></span></div>
+          <div class="holo-actions">
+            <button class="btn" data-view="projects">PROYECTOS</button>
+            <button class="btn ghost" data-view="contact">CONTACTO</button>
+          </div>
+          <div class="holo-metrics">
+            <div class="hm"><b data-count="10">0</b><span>años exp.</span></div>
+            <div class="hm"><b data-count="40">0</b><span>proyectos</span></div>
+            <div class="hm"><b data-count="6">0</b><span>áreas</span></div>
+          </div>
+        </section>
+
+        <section class="panel" data-view="stack"><div id="stackGrid"></div></section>
+        <section class="panel" data-view="projects"><div id="projGrid" class="hproj"></div></section>
+        <section class="panel" data-view="experience"><div id="timeline"></div></section>
+        <section class="panel" data-view="contact"><div id="contactGrid" class="hcontact"></div></section>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

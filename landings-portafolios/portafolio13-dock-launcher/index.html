@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Launchport — Cristian Torres · Full Stack</title>
+  <meta name="description" content="Portafolio tipo lanzador de escritorio de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#E9EDF5" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="desktop-fx"></div>
+
+  <header class="menubar">
+    <div><span class="apple">•</span> Launch — Cristian Torres</div>
+    <div class="menuright">Full Stack Dev <span id="clock">00:00</span></div>
+  </header>
+
+  <div class="desktop">
+    <div class="welcome" id="welcomeWin">
+      <div class="welcome-text">Hola, soy <b>Cristian Torres</b>.</div>
+      <div class="welcome-sub">Full Stack Developer — 10+ años. Abre una ventana del dock para explorar.</div>
+    </div>
+  </div>
+
+  <footer class="dock" id="dock"></footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

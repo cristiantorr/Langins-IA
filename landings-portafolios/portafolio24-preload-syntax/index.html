@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>~/syntax · Cristian Torres</title>
+  <meta name="description" content="Portafolio Syntax de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#151A23" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="locked">
+
+  <div class="preloader" id="preloader">
+    <div class="pl-window">
+      <div class="pl-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="pl-title">~/cv.txt</span></div>
+      <pre id="pl-code" class="pl-code"></pre>
+    </div>
+  </div>
+
+  <div class="backdrop" aria-hidden="true">
+    <div class="figure" style="top:6%;right:-2%;width:340px">
+      <span class="fig-cap">main.ts</span>
+      <svg viewBox="0 0 320 220">
+        <g fill="none" stroke-width="4" stroke-linecap="round">
+          <path class="fig-line" stroke="#C792EA" d="M16 30 L40 30"/>
+          <path class="fig-line" stroke="#7FDBCA" d="M16 60 L100 60"/>
+          <path class="fig-line" stroke="#F78C6C" d="M16 90 L130 90"/>
+          <path class="fig-line" stroke="#82AAFF" d="M16 120 L210 120"/>
+          <path class="fig-line" stroke="#89DDFF" d="M16 150 L60 150"/>
+          <path class="fig-line" stroke="#C792EA" d="M16 180 L170 180"/>
+          <path class="fig-line" stroke="#7FDBCA" d="M16 205 L230 205"/>
+        </g>
+        <g fill="#C792EA"><circle class="fig-pt" cx="16" cy="30" r="5"/><circle class="fig-pt" cx="16" cy="60" r="5"/><circle class="fig-pt" cx="16" cy="90" r="5"/><circle class="fig-pt" cx="16" cy="120" r="5"/><circle class="fig-pt" cx="16" cy="150" r="5"/><circle class="fig-pt" cx="16" cy="180" r="5"/></g>
+      </svg>
+    </div>
+    <div class="figure" style="top:40%;left:-2%;width:300px">
+      <span class="fig-cap">api.php</span>
+      <svg viewBox="0 0 280 210">
+        <g fill="none" stroke-width="4" stroke-linecap="round">
+          <path class="fig-line" stroke="#FFCB6B" d="M14 26 L150 26"/>
+          <path class="fig-line" stroke="#7FDBCA" d="M14 52 L90 52"/>
+          <path class="fig-line" stroke="#C792EA" d="M14 78 L200 78"/>
+          <path class="fig-line" stroke="#F78C6C" d="M14 104 L120 104"/>
+          <path class="fig-line" stroke="#82AAFF" d="M14 130 L170 130"/>
+          <path class="fig-line" stroke="#7FDBCA" d="M14 156 L240 156"/>
+          <path class="fig-line" stroke="#FFCB6B" d="M14 182 L60 182"/>
+        </g>
+        <g fill="#F78C6C"><circle class="fig-pt" cx="14" cy="26" r="5"/><circle class="fig-pt" cx="14" cy="52" r="5"/><circle class="fig-pt" cx="14" cy="78" r="5"/><circle class="fig-pt" cx="14" cy="104" r="5"/><circle class="fig-pt" cx="14" cy="130" r="5"/><circle class="fig-pt" cx="14" cy="156" r="5"/></g>
+      </svg>
+    </div>
+    <div class="figure" style="bottom:4%;right:16%;width:260px">
+      <span class="fig-cap">deploy.yml</span>
+      <svg viewBox="0 0 240 190">
+        <g fill="none" stroke-width="4" stroke-linecap="round">
+          <path class="fig-line" stroke="#C792EA" d="M12 24 L110 24"/>
+          <path class="fig-line" stroke="#82AAFF" d="M12 52 L170 52"/>
+          <path class="fig-line" stroke="#7FDBCA" d="M12 80 L90 80"/>
+          <path class="fig-line" stroke="#F78C6C" d="M12 108 L150 108"/>
+          <path class="fig-line" stroke="#89DDFF" d="M12 136 L200 136"/>
+          <path class="fig-line" stroke="#C792EA" d="M12 164 L70 164"/>
+        </g>
+        <g fill="#82AAFF"><circle class="fig-pt" cx="12" cy="24" r="5"/><circle class="fig-pt" cx="12" cy="52" r="5"/><circle class="fig-pt" cx="12" cy="80" r="5"/><circle class="fig-pt" cx="12" cy="108" r="5"/><circle class="fig-pt" cx="12" cy="136" r="5"/><circle class="fig-pt" cx="12" cy="164" r="5"/></g>
+      </svg>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="brand"><span class="ln">~</span>/cristian</div>
+    <div class="links"><a href="#perfil">perfil</a><a href="#stack">stack</a><a href="#proyectos">proyectos</a><a href="#contacto">contacto</a></div>
+  </nav>
+
+  <main class="flow">
+    <section id="perfil" class="sec hero">
+      <span class="k">// 01 — perfil</span>
+      <h1>Código con <em>sintaxis</em> impecable</h1>
+      <div class="hero-grid">
+        <div class="hero-body">
+          <p class="lede"><b>Cristian Torres</b> — Full Stack Developer. Escribo y refactorizo código claro, tipado y mantenible. 10+ años de producción sin errores de compilación inesperados.</p>
+          <div class="btns"><a href="#proyectos" class="btn">ver snippet →</a><a href="#contacto" class="btn ghost">contactar</a></div>
+        </div>
+        <div class="photo"><img id="portrait" src="https://randomuser.me/api/portraits/men/52.jpg" alt="Cristian Torres" /></div>
+      </div>
+    </section>
+  </main>
+  <section id="stack" class="sec rv"><span class="eyebrow">// 02 — stack</span><h2>Stack.</h2><div id="stackGrid" class="grid3"></div></section>
+  <section id="proyectos" class="sec rv"><span class="eyebrow">// 03 — proyectos</span><h2>Proyectos.</h2><div id="projGrid" class="grid3"></div></section>
+  <section id="camino" class="sec rv"><span class="eyebrow">// 04 — camino</span><h2>Camino.</h2><div id="timeline" class="h"></div></section>
+  <section id="contacto" class="sec rv"><span class="eyebrow">// 05 — contacto</span><h2>Contacto.</h2><div id="contactGrid" class="grid3"></div></section>
+
+  <footer class="foot">© 2026 — stdout limpio, código ordenado.</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

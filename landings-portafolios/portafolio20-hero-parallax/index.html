@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>stack · Cristian Torres</title>
+  <meta name="description" content="Portafolio parallax de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#111827" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="orbs" id="orbs"><i class="o1"></i><i class="o2"></i><i class="o3"></i></div>
+
+  <nav class="nav">
+    <div class="brand">cristian<span class="dot">.</span>torres</div>
+    <div class="links">
+      <a href="#about">acerca</a>
+      <a href="#stack">stack</a>
+      <a href="#work">trabajo</a>
+      <a href="#contact">contacto</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="hero-inner" id="heroInner">
+      <span class="eyebrow">FULL STACK · 10+ AÑOS · MEDELLÍN</span>
+      <h1>Software web<br />que <em>impacta</em>.</h1>
+      <p class="lede">Cristian Torres — construyo backend sólido y frontend impecable. PHP, React, WordPress y la nube, bajo control.</p>
+      <div class="hero-photo"><img id="portrait" src="https://randomuser.me/api/portraits/men/52.jpg" alt="Cristian Torres" /></div>
+      <a class="scroll-hint" href="#about">desplázate ↓</a>
+    </div>
+  </header>
+
+  <section class="deck" id="about">
+    <div class="card c1">
+      <span class="k">01 / ACERCA</span>
+      <h2>Una década<br/>haciendo que pase.</h2>
+      <p>Desde 2014 entrego software en producción: plugins que aligeran, dashboards que operan y refactors que despejan cuellos de botella. <b>+60% de rendimiento</b> en una auditoría AWS; <b>−20% de carga</b> con plugins ACF.</p>
+    </div>
+  </section>
+
+  <section class="deck" id="stack">
+    <div class="card c2">
+      <span class="k">02 / STACK</span>
+      <h2>Herramientas<br/>que domino.</h2>
+      <div id="stackGrid" class="chips-grid"></div>
+    </div>
+  </section>
+
+  <section class="deck" id="work">
+    <div class="card c3">
+      <span class="k">03 / TRABAJO</span>
+      <h2>Proyectos<br/>con resultados.</h2>
+      <div id="projGrid" class="proj-grid"></div>
+    </div>
+  </section>
+
+  <section class="deck" id="path">
+    <div class="card c4">
+      <span class="k">04 / CAMINO</span>
+      <h2>De dónde<br/>vengo.</h2>
+      <div id="timeline" class="timeline"></div>
+    </div>
+  </section>
+
+  <footer id="contact" class="contact">
+    <span class="k">05 / CONTACTO</span>
+    <h2>Hablemos de<br/>tu proyecto.</h2>
+    <div id="contactGrid" class="contact-row"></div>
+    <p class="foot-note">© 2026 Cristian Torres — hecho a mano, con rigurosidad de dev senior.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>~ Cristian Torres · dev console</title>
+  <meta name="description" content="Portafolio desarrollador en terminal de Cristian Torres, Full Stack." />
+  <meta name="theme-color" content="#0B0F14" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="term">
+    <div class="tbar">
+      <span class="dots"><i></i><i></i><i></i></span>
+      <span class="t-title">cristian@torres: ~/portfolio</span>
+      <span id="tclock" class="t-clock">[--:--:--]</span>
+    </div>
+
+    <main class="tbody" id="tbody">
+
+      <section class="blk rv" data-rv>
+        <div class="cmd">$ whoami --full</div>
+        <div class="out big" id="hero">
+          <h1 class="ghost-row">Cristian<span class="accent">Torres</span></h1>
+          <div class="role-line">FULL STACK DEVELOPER <span class="dim">//</span> 10+ AÑOS</div>
+          <p class="lede">Construyo web que <span class="g">escala</span> y que <span class="c">vende</span>. PHP, WordPress, React y AWS desde Medellín.</p>
+          <div class="hero-actions">
+            <a class="btn-link" href="#proyectos">cd ./proyectos →</a>
+            <a class="btn-link ghost" href="#contacto">contactar</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="blk-about rv">
+        <div class="bio-grid">
+          <div class="bio-photo"><img id="portrait" src="https://randomuser.me/api/portraits/men/86.jpg" alt="Cristian Torres" /></div>
+          <div class="bio-text">
+            <div class="cmd">$ cat sobre-mi.txt</div>
+            <p>Soy un desarrollador Full Stack con <b>10+ años</b> en producción real. Del backend robusto (PHP, Laravel, Node) al frontend cuidado (React, TypeScript). <span class="c">Especialista en WordPress y ACF PRO</span>, obsesionado con el rendimiento y el SEO técnico.</p>
+            <ul class="meta">
+              <li><span class="dim">ubicación</span> Medellín, Colombia</li>
+              <li><span class="dim">rol</span> Full Stack Developer</li>
+              <li><span class="dim">estado</span> <span class="g">● open to work</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="section rv">
+        <div class="cmd">$ tree ./stack</div>
+        <div id="stackGrid" class="grid3"></div>
+      </section>
+
+      <section id="projects" class="section rv">
+        <div class="cmd">$ ls ./proyectos</div>
+        <div id="projGrid" class="grid3"></div>
+      </section>
+
+      <section id="trayectoria" class="section rv">
+        <div class="cmd">$ git log --format="%cr %s" --oneline 2014..2026</div>
+        <div id="timeline"></div>
+      </section>
+
+      <section id="contacto" class="section rv">
+        <div class="cmd">$ python3 contact.py</div>
+        <div id="contactGrid" class="grid3"></div>
+        <div class="end">— fin de la consola —</div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

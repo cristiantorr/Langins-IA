@@ -1,0 +1,15 @@
+{
+  "name": "Launchport — Cristian Torres",
+  "short_name": "Launchport",
+  "description": "Portafolio tipo lanzador de escritorio de Cristian Torres, Full Stack Developer.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape-primary",
+  "background_color": "#E9EDF5",
+  "theme_color": "#E9EDF5",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

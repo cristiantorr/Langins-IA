@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⟨ graph ⟩ · Cristian Torres</title>
+  <meta name="description" content="Portafolio Graph de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#0D0F14" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="locked">
+
+  <div class="preloader" id="preloader">
+    <div class="pl-center">
+      <div id="graph-seed"></div>
+      <div class="pl-count"><span id="pl-n">0</span> <span class="dim">/ 120 nodes</span></div>
+    </div>
+  </div>
+
+  <div class="backdrop" aria-hidden="true">
+    <div class="figure" style="top:8%;left:-2%;width:320px">
+      <svg viewBox="0 0 300 260">
+        <g fill="none" stroke="#8B5CF6" stroke-width="2">
+          <path class="fig-line" d="M150 40 L300 110 L150 200"/>
+          <path class="fig-line" d="M150 40 L60 130 L150 200"/>
+          <path class="fig-line" d="M150 40 L220 150 L150 200"/>
+          <path class="fig-line" d="M150 40 L110 150 L150 200"/>
+        </g>
+        <g fill="#F0ABFC"><circle class="fig-pt" cx="150" cy="40" r="12"/><circle class="fig-pt" cx="60" cy="130" r="9"/><circle class="fig-pt" cx="300" cy="130" r="9"/><circle class="fig-pt" cx="150" cy="200" r="13"/><circle class="fig-pt" cx="220" cy="150" r="8"/><circle class="fig-pt" cx="110" cy="150" r="8"/></g>
+      </svg>
+    </div>
+    <div class="figure" style="top:42%;right:-3%;width:260px">
+      <span class="fig-cap">grafos</span>
+      <svg viewBox="0 0 240 220">
+        <g fill="none" stroke="#8B5CF6" stroke-width="2">
+        <path class="fig-line" d="M120 20 L120 90 L200 130 L120 200 L40 130 Z"/>
+        <path class="fig-line" d="M120 20 L40 130 M120 90 L200 130 M120 200 L200 130"/>
+      </g>
+      <g fill="#8B5CF6"><circle class="fig-pt" cx="120" cy="20" r="10"/><circle class="fig-pt" cx="120" cy="90" r="8"/><circle class="fig-pt" cx="40" cy="130" r="9"/><circle class="fig-pt" cx="200" cy="130" r="9"/><circle class="fig-pt" cx="120" cy="200" r="10"/></g>
+      </svg>
+    </div>
+    <div class="figure" style="bottom:6%;left:10%;width:200px">
+      <span class="fig-cap" style="color:var(--ink)">nodos</span>
+      <svg viewBox="0 0 180 160">
+        <g fill="none" stroke="#22D3EE" stroke-width="2"><path class="fig-line" d="M90 20 L30 140 L150 140 Z"/><path class="fig-line" d="M90 20 L90 140 M30 80 L150 80"/></g>
+        <g fill="#22D3EE"><circle class="fig-pt" cx="90" cy="20" r="9"/><circle class="fig-pt" cx="30" cy="140" r="8"/><circle class="fig-pt" cx="150" cy="140" r="8"/></g>
+      </svg>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="brand"><span class="ln">⟨/⟩</span> cristian_torres</div>
+    <div class="links"><a href="#perfil">perfil</a><a href="#stack">stack</a><a href="#proyectos">proyectos</a><a href="#contacto">contacto</a></div>
+  </nav>
+
+  <main class="flow">
+    <section id="perfil" class="sec hero">
+      <span class="k">// 01 — perfil</span>
+      <h1>Todo nodo tiene <em>conexión</em></h1>
+      <div class="hero-grid">
+        <div class="hero-body">
+          <p class="lede"><b>Cristian Torres</b> — Full Stack Developer. Tejo capas y servicios, de la base de datos al interfaz. 10+ años conectando sistemas en producción.</p>
+          <div class="btns"><a href="#proyectos" class="btn">ver nodos →</a><a href="#contacto" class="btn ghost">contactar</a></div>
+        </div>
+        <div class="photo"><img id="portrait" src="https://randomuser.me/api/portraits/men/41.jpg" alt="Cristian Torres" /></div>
+      </div>
+    </section>
+  </main>
+  <section id="stack" class="sec rv"><span class="eyebrow">// 02 — stack</span><h2>Stack.</h2><div id="stackGrid" class="grid3"></div></section>
+  <section id="proyectos" class="sec rv"><span class="eyebrow">// 03 — proyectos</span><h2>Proyectos.</h2><div id="projGrid" class="grid3"></div></section>
+  <section id="camino" class="sec rv"><span class="eyebrow">// 04 — camino</span><h2>Camino.</h2><div id="timeline" class="h"></div></section>
+  <section id="contacto" class="sec rv"><span class="eyebrow">// 05 — contacto</span><h2>Contacto.</h2><div id="contactGrid" class="grid3"></div></section>
+
+  <footer class="foot">© 2026 — cada nodo suma valor a la red.</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

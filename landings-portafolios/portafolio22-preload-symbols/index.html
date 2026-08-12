@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{ symbols } · Cristian Torres</title>
+  <meta name="description" content="Portafolio Symbols de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#F6F3EC" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="locked">
+
+  <div class="preloader" id="preloader">
+    <div class="pl"><span class="pl-sym">{</span><span class="pl-ty" id="pl-ty"></span><span class="pl-caret">▍</span></div>
+  </div>
+
+  <div class="backdrop" aria-hidden="true">
+    <div class="figure" style="top:12%;left:-4%;width:220px"><span class="fig-cap">braces</span><svg viewBox="0 0 200 150"><g fill="none" stroke="#1B1E28" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path class="fig-line" d="M124 20 c-16 8 -18 22 -12 36 6 10 14 14 14 19 0 5 -8 9 -14 19 -6 14 -4 28 12 36"/><path class="fig-line" d="M76 20 c16 8 18 22 12 36 -6 10 -14 14 -14 19 0 5 8 9 14 19 6 18 4 28 -12 36"/></g><g class="fig-pts"><circle class="fig-pt" cx="124" cy="30" r="4"/><circle class="fig-pt" cx="76" cy="30" r="4"/></g></svg></div>
+    <div class="figure" style="top:30%;right:-4%;width:200px"><span class="fig-cap">parens</span><svg viewBox="0 0 180 150"><g fill="none" stroke="#E8423E" stroke-width="5" stroke-linecap="round"><path class="fig-line" d="M96 28 c-40 18 -40 90 0 106"/><path class="fig-line" d="M84 24 c40 20 40 88 0 108"/></g><g class="fig-pts"><circle class="fig-pt" cx="66" cy="60" r="4"/><circle class="fig-pt" cx="114" cy="92" r="4"/></g></svg></div>
+    <div class="figure" style="top:60%;left:-3%;width:240px"><span class="fig-cap">arrow</span><svg viewBox="0 0 220 120"><g fill="none" stroke="#1B9E8F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path class="fig-line" d="M12 60 H150"/><path class="fig-line" d="M120 34 l32 26 -32 26"/></g><g class="fig-pts"><circle class="fig-pt" cx="150" cy="60" r="5"/><circle class="fig-pt" cx="70" cy="60" r="4"/></g></svg></div>
+    <div class="figure" style="top:12%;left:40%;width:180px"><span class="fig-cap">hash</span><svg viewBox="0 0 160 140"><g fill="none" stroke="#1B1E28" stroke-width="5" stroke-linecap="round"><path class="fig-line" d="M40 30 v104"/><path class="fig-line" d="M116 40 v100"/><path class="fig-line" d="M18 62 h124"/><path class="fig-line" d="M22 108 h120"/></g><g class="fig-pts"><circle class="fig-pt" cx="60" cy="70" r="4"/><circle class="fig-pt" cx="130" cy="90" r="4"/></g></svg></div>
+    <div class="figure" style="bottom:2%;right:14%;width:300px"><span class="fig-cap">semicolon</span><svg viewBox="0 0 260 110"><g fill="none" stroke="#1B9E8F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path class="fig-line" d="M14 22 c10 4 -2 22 10 30"/><path class="fig-line" d="M60 40 H180"/><path class="fig-line" d="M150 16 l26 26 -26 26"/></g><g class="fig-pts"><circle class="fig-pt" cx="180" cy="70" r="5"/></g></svg></div>
+  </div>
+
+  <nav class="nav">
+    <div class="brand"><span class="ln">//</span> cristian<span>_torres</span></div>
+    <div class="links"><a href="#perfil">[ perfil ]</a><a href="#stack">[ stack ]</a><a href="#proyectos">[ proyectos ]</a><a href="#contacto">[ contacto ]</a></div>
+  </nav>
+
+  <main class="flow">
+    <section id="perfil" class="sec hero">
+      <span class="k">// 01 — perfil</span>
+      <h1>El código es <em>simetría</em></h1>
+      <div class="hero-grid">
+        <div class="hero-body">
+          <p class="lede"><b>Cristian Torres</b> — Full Stack Developer. Equilibrio entre backend y frontend, entre funciones y mantenibilidad. 10+ años en producción.</p>
+          <div class="btns"><a href="#proyectos" class="btn">ver proyectos →</a><a href="#contacto" class="btn ghost">contactar</a></div>
+        </div>
+        <div class="photo"><img id="portrait" src="https://randomuser.me/api/portraits/men/28.jpg" alt="Cristian Torres" /></div>
+      </div>
+    </section>
+  </main>
+  <section id="stack" class="sec rv"><span class="eyebrow">// 02 — stack</span><h2>Stack.</h2><div id="stackGrid" class="grid3"></div></section>
+  <section id="proyectos" class="sec rv"><span class="eyebrow">// 03 — proyectos</span><h2>Proyectos.</h2><div id="projGrid" class="grid3"></div></section>
+  <section id="camino" class="sec rv"><span class="eyebrow">// 04 — camino</span><h2>Camino.</h2><div id="timeline" class="h"></div></section>
+  <section id="contacto" class="sec rv"><span class="eyebrow">// 05 — contacto</span><h2>Contacto.</h2><div id="contactGrid" class="grid3"></div></section>
+
+  <footer class="foot">© 2026 — símbolos con propósito.</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

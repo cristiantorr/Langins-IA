@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRISTIAN.EXE :: FULL STACK DEV — RETRO CYBERDECK</title>
+  <meta name="description" content="Portafolio DOS/CRT de Cristian Torres, Full Stack Developer. Interfaz retro de terminal." />
+  <meta name="theme-color" content="#01012B" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- BOOT / POWER ON -->
+  <div id="boot">
+    <div class="boot-log" id="bootLog"></div>
+    <div class="boot-hint" id="bootHint">▶ PRESIONA CUALQUIER TECLA</div>
+  </div>
+
+  <!-- TERMINAL CRT -->
+  <div id="crt" class="crt hidden">
+    <div class="crt-curve">
+      <div class="scanlines"></div>
+      <div class="screen">
+        <header class="dosbar">
+          <span class="dos-title">C:\CRISTIAN.EXE — FULL STACK DEVELOPER</span>
+          <span class="dos-clock" id="dosClock">00:00</span>
+        </header>
+
+        <div class="dos-body">
+          <!-- MENÚ DOS (izquierda, fijo) -->
+          <aside class="menu">
+            <div class="menu-title">— M E N Ú —</div>
+            <button class="menu-item active" data-view="home"><span>[1]</span> INICIO</button>
+            <button class="menu-item" data-view="stack"><span>[2]</span> STACK</button>
+            <button class="menu-item" data-view="projects"><span>[3]</span> PROYECTOS</button>
+            <button class="menu-item" data-view="experience"><span>[4]</span> CV</button>
+            <button class="menu-item" data-view="contact"><span>[5]</span> CONTACTO</button>
+            <div class="menu-tip">usa las teclas 1-5</div>
+          </aside>
+
+          <!-- PANTALLA ACTIVA (swap con flicker) -->
+          <main class="content">
+            <section class="cview active" data-view="home">
+              <pre class="ascii-art" id="asciiArt"></pre>
+              <div class="welcome">
+                <div class="w-name">CRISTIAN TORRES</div>
+                <div class="w-role">&gt;&gt; FULL STACK DEVELOPER &lt;&lt;</div>
+                <p class="w-desc">
+                  Desarrollador con <span class="neon-pink">10+ años</span> en PHP, WordPress y React.
+                  Construyo aplicaciones web, plugins e integraciones REST que escalan bien.
+                  Riesgo bajo, uptime alto. Operación clásica + IA estratégica.
+                </p>
+                <div class="w-actions">
+                  <button class="retro-btn" data-view="projects">◄ VER PROYECTOS ►</button>
+                  <button class="retro-btn ghost" data-view="contact">CABEZA CONTACTO</button>
+                </div>
+                <div class="w-stats">
+                  <span>EXP: <b class="neon-pink">10+ AÑOS</b></span>
+                  <span>PROYECTOS: <b class="neon-pink">40+</b></span>
+                  <span>BASE: <b class="neon-pink">MEDELLIN</b></span>
+                </div>
+              </div>
+            </section>
+
+            <section class="cview" data-view="stack">
+              <div class="cview-title">&gt;&gt; STACK TECNOLÓGICO</div>
+              <div id="stackGrid" class="stack-grid"></div>
+            </section>
+
+            <section class="cview" data-view="projects">
+              <div class="cview-title">&gt;&gt; PROYECTOS DESTACADOS</div>
+              <div id="projGrid" class="proj-grid"></div>
+            </section>
+
+            <section class="cview" data-view="experience">
+              <div class="cview-title">&gt;&gt; EXPERIENCIA / CV</div>
+              <div id="cvList" class="cv-list"></div>
+              <div class="edu-block" id="eduBlock"></div>
+            </section>
+
+            <section class="cview" data-view="contact">
+              <div class="cview-title">&gt;&gt; CANALES DE CONTACTO</div>
+              <div id="contactList" class="contact-list"></div>
+            </section>
+          </main>
+        </div>
+
+        <footer class="statusbar">
+          <span id="statusLead">DOS 6.22 — SECCIÓN: HOME</span>
+          <span class="spacer"></span>
+          <span class="ok">MEM: OK</span>
+          <span class="ok">HDD: OK</span>
+          <span id="sysHealthy" class="ok">SYS: ONLINE</span>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

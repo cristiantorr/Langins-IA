@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRISTIAN TORRES :: FULL STACK DEV — MATRIX TERMINAL</title>
+  <meta name="description" content="Portafolio de Cristian Torres, Full Stack Developer con 10+ años en PHP, WordPress y React. Terminal interactiva." />
+  <meta name="theme-color" content="#0C0C0C" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Lluvia de código Matrix -->
+  <canvas id="matrixRain" aria-hidden="true"></canvas>
+
+  <!-- BOOT SEQUENCE -->
+  <div id="boot">
+    <div class="boot-box">
+      <div id="bootLog" class="boot-log" aria-live="polite"></div>
+      <span id="bootCursor" class="cursor"></span>
+    </div>
+  </div>
+
+  <!-- SHELL PRINCIPAL -->
+  <div id="shell" class="shell hidden">
+    <header id="topbar">
+      <span class="brand">// CRISTIAN_TORRES :: TERMINAL v2.0</span>
+      <span class="status-dot">●</span>
+      <span id="clock" class="clock">--:--:--</span>
+      <span class="sys-status">SYS.RUNNING</span>
+    </header>
+
+    <div class="shell-grid">
+      <!-- NAV LATERAL FIXED (tabs) -->
+      <aside id="sidebar">
+        <div class="user-box">
+          <span class="prompt">cristian@portafolio</span>
+          <span class="cwd">~ $ whoami</span>
+        </div>
+        <nav id="nav" aria-label="Navegación principal">
+          <button class="nav-btn active" data-view="home">~/home</button>
+          <button class="nav-btn" data-view="stack">~/stack</button>
+          <button class="nav-btn" data-view="projects">~/projects</button>
+          <button class="nav-btn" data-view="experience">~/experience</button>
+          <button class="nav-btn" data-view="contact">~/contact</button>
+        </nav>
+        <div class="help-hint">TIP: teclea "help" en la terminal ↓</div>
+      </aside>
+
+      <!-- PANEL CENTRAL (sin scroll de página) -->
+      <main id="screen">
+        <div id="views">
+          <!-- 1. HERO / IDENTIDAD -->
+          <section class="view active" data-view="home" role="tabpanel">
+            <div class="hero">
+              <p class="glitch" data-text="CRISTIAN TORRES">CRISTIAN TORRES</p>
+              <h1 class="hero-role">FULL STACK DEVELOPER</h1>
+              <p class="hero-tag">
+                10+ años creando aplicaciones web, plugins e integraciones de APIs REST escalables
+                con <span class="neon">PHP</span>, <span class="neon">WordPress</span> y <span class="neon">React</span>.
+                Desarrollo tradicional potenciado con IA estratégica.
+              </p>
+              <div class="hero-stats">
+                <div class="stat"><span class="stat-num" data-count="10">0</span><span class="stat-label">+ AÑOS EXP.</span></div>
+                <div class="stat"><span class="stat-num" data-count="40">0</span><span class="stat-label">+ PROYECTOS</span></div>
+                <div class="stat"><span class="stat-num" data-count="6">0</span><span class="stat-label">ÁREAS STACK</span></div>
+              </div>
+              <div class="hero-actions">
+                <button class="btn-neon" data-view="contact">INICIAR CONTACTO</button>
+                <button class="btn-ghost" data-view="projects">VER PROYECTOS</button>
+              </div>
+              <p class="hero-prompt">cristian@portafolio:~$ <span class="blink">▊</span></p>
+            </div>
+          </section>
+
+          <!-- 2. STACK -->
+          <section class="view" data-view="stack" role="tabpanel">
+            <h2 class="view-title"><span class="accent">[</span> stack_tecnológico <span class="accent">]</span></h2>
+            <div id="stackGrid" class="stack-grid">
+              <!-- rellenado desde DATA en app.js -->
+            </div>
+          </section>
+
+          <!-- 3. PROYECTOS -->
+          <section class="view" data-view="projects" role="tabpanel">
+            <h2 class="view-title"><span class="accent">[</span> proyectos_destacados <span class="accent">]</span></h2>
+            <div id="projGrid" class="proj-grid">
+              <!-- rellenado desde DATA en app.js -->
+            </div>
+          </section>
+
+          <!-- 4. EXPERIENCIA -->
+          <section class="view" data-view="experience" role="tabpanel">
+            <h2 class="view-title"><span class="accent">[</span> experiencia_cv <span class="accent">]</span></h2>
+            <div class="timeline">
+              <!-- rellenado desde DATA en app.js -->
+            </div>
+          </section>
+
+          <!-- 5. CONTACTO -->
+          <section class="view" data-view="contact" role="tabpanel">
+            <h2 class="view-title"><span class="accent">[</span> canal_de_comunicación <span class="accent">]</span></h2>
+            <div class="contact-grid">
+              <!-- rellenado desde DATA en app.js -->
+            </div>
+          </section>
+        </div>
+
+        <!-- TERMINAL INTERACTIVA -->
+        <div id="terminal">
+          <div id="termLog" class="term-log" aria-live="polite"></div>
+          <form id="termForm" class="term-input-row" autocomplete="off">
+            <span class="prompt">cristian@portafolio:~$</span>
+            <input id="cmdInput" type="text" placeholder="escribe 'help' y Enter" aria-label="Comando de terminal" autocomplete="off" spellcheck="false" />
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

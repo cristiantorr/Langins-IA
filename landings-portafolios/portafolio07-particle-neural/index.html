@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRISTIAN TORRES · NEURAL NETWORK — FULL STACK</title>
+  <meta name="description" content="Portafolio red neuronal animada de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#0F0F16" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="net"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="app">
+    <header class="topbar">
+      <span class="brand">NEURAL//<span class="ok">CRISTIAN</span></span>
+      <span class="ping">SYNAPSE <i></i></span>
+      <span id="clock" class="clock">00:00:00</span>
+    </header>
+
+    <main class="stage">
+      <section class="panel active" data-view="home">
+        <div class="hero">
+          <div class="kicker">CONECTANDO NEURONAS · FULL STACK DEV</div>
+          <h1 class="name" id="bigName">CRISTIAN<br/>TORRES</h1>
+          <div class="role">PHP · WORDPRESS · REACT — 10+ AÑOS</div>
+          <p class="lede">Red de nodos: frontend, backend, CMS, nube y datos. Cada neurona en su lugar, disparando <span class="ok">APIs REST escalables</span>.</p>
+          <div class="actions">
+            <button class="btn" data-view="stack">MAPA DEL STACK</button>
+            <button class="btn ghost" data-view="contact">SINAPSIS → CONTACTO</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" data-view="stack"><div id="stackGrid" class="stack-grid"></div></section>
+      <section class="panel" data-view="projects"><div id="projGrid" class="proj-grid"></div></section>
+      <section class="panel" data-view="experience"><div id="timeline" class="timeline"></div></section>
+      <section class="panel" data-view="contact"><div id="contactGrid" class="contact-grid"></div></section>
+    </main>
+
+    <!-- NAV DERECHA -->
+    <aside class="dotnav" aria-label="Navegación">
+      <button class="dnav active" data-view="home"><span class="dn-label">INICIO</span></button>
+      <button class="dnav" data-view="stack"><span class="dn-label">STACK</span></button>
+      <button class="dnav" data-view="projects"><span class="dn-label">PROYECTOS</span></button>
+      <button class="dnav" data-view="experience"><span class="dn-label">EXPERIENCIA</span></button>
+      <button class="dnav" data-view="contact"><span class="dn-label">CONTACTO</span></button>
+    </aside>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRISTIAN TORRES :: FULL STACK DEV — MISSION CONTROL HUD</title>
+  <meta name="description" content="Portafolio HUD estilo misión de Cristian Torres, Full Stack Developer. Panel de control sin scroll." />
+  <meta name="theme-color" content="#0A0E17" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Scanlines / viñeta HUD -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- RECOMENDACIÓN / BANNER -->
+  <div class="mission-frame">
+
+    <!-- BARRA SUP. -->
+    <header class="topbar">
+      <div class="brand"><span class="glow-dot"></span> NEURAL_CORTEX // HUD_01</div>
+      <div class="top-mid">
+        <span id="tmClock" class="tm-readout">00:00:00</span>
+        <span class="tm-status">MODO: CONTRATACIÓN</span>
+      </div>
+      <div class="top-right">
+        <span class="status-ping">● <span>RED ESTABLE</span></span>
+        <button class="btn-hud" data-view="contact">ESTABLECER CONTACTO</button>
+      </div>
+    </header>
+
+    <div class="body-grid">
+      <!-- RAIL NAV LATERAL -->
+      <aside class="rail" aria-label="Navegación">
+        <button class="rail-item active" data-view="home">
+          <span class="rail-icon">◈</span><span class="rail-label">PERFIL</span><span class="rail-idx">01</span>
+        </button>
+        <button class="rail-item" data-view="stack">
+          <span class="rail-icon">⬡</span><span class="rail-label">STACK</span><span class="rail-idx">02</span>
+        </button>
+        <button class="rail-item" data-view="projects">
+          <span class="rail-icon">▣</span><span class="rail-label">PROYECTOS</span><span class="rail-idx">03</span>
+        </button>
+        <button class="rail-item" data-view="experience">
+          <span class="rail-icon">⌖</span><span class="rail-label">TRAYECTORIA</span><span class="rail-idx">04</span>
+        </button>
+        <button class="rail-item" data-view="contact">
+          <span class="rail-icon">✉</span><span class="rail-label">CANAL</span><span class="rail-idx">05</span>
+        </button>
+      </aside>
+
+      <!-- MÓDULO CENTRAL (tracks que deslizan horizontalmente) -->
+      <main class="stage">
+        <div id="track" class="track">
+          <section class="panel" data-view="home">
+            <div class="hud-corner tl"></div><div class="hud-corner tr"></div><div class="hud-corner bl"></div><div class="hud-corner br"></div>
+            <div class="panel-inner">
+              <div class="kick">OPERADOR ASIGNADO · ID #CT-001 · CLEARANCE: FULL-ACCESS</div>
+              <h1 class="hud-title">CRISTIAN<br>TORRES</h1>
+              <div class="hud-sub">FULL STACK DEVELOPER</div>
+              <p class="hud-desc">
+                10+ años desplegando aplicaciones web, plugins e integraciones REST con
+                <span class="cyan">PHP</span>, <span class="pink">WordPress</span> y <span class="cyan">React</span>.
+                Operación tradicional + IA estratégica para máxima fiabilidad.
+              </p>
+              <div id="ringWrap" class="ring-wrap">
+                <div class="ring" id="ring"><span id="ringNum">0</span><small>%</small></div>
+                <div class="ring-meta">
+                  <div class="rm-item"><span>TIEMPO EN CAMPO</span><b id="sigYears">10+</b></div>
+                  <div class="rm-item"><span>MODULOS DESPLEGADOS</span><b id="sigProj">40+</b></div>
+                  <div class="rm-item"><span>ÁREAS DE STACK</span><b id="sigAreas">6</b></div>
+                </div>
+              </div>
+              <div class="hud-cta">
+                <button class="btn-hud" data-view="projects">VER OPERACIONES ▸</button>
+                <button class="btn-hud ghost" data-view="experience">REVISAR FLUJO</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" data-view="stack">
+            <div class="hud-corner tl"></div><div class="hud-corner tr"></div><div class="hud-corner bl"></div><div class="hud-corner br"></div>
+            <div class="panel-inner">
+              <div class="panel-head"><span class="ptag">MOD-02 //</span> STACK TECNOLÓGICO</div>
+              <div id="stackGrid" class="stack-grid"></div>
+            </div>
+          </section>
+
+          <section class="panel" data-view="projects">
+            <div class="hud-corner tl"></div><div class="hud-corner tr"></div><div class="hud-corner bl"></div><div class="hud-corner br"></div>
+            <div class="panel-inner">
+              <div class="panel-head"><span class="ptag">MOD-03 //</span> OPERACIONES / PROYECTOS</div>
+              <div id="projGrid" class="proj-grid"></div>
+            </div>
+          </section>
+
+          <section class="panel" data-view="experience">
+            <div class="hud-corner tl"></div><div class="hud-corner tr"></div><div class="hud-corner bl"></div><div class="hud-corner br"></div>
+            <div class="panel-inner">
+              <div class="panel-head"><span class="ptag">MOD-04 //</span> FLUJO DE TRABAJO</div>
+              <div class="exp-grid">
+                <div id="timeline" class="timeline"></div>
+                <div class="edu-side">
+                  <div class="edu-card"><div class="edu-org">SENA</div><div class="edu-title">Tecnólogo en Análisis y Desarrollo de Sistemas</div><div class="edu-dates">2012 — 2014</div></div>
+                  <div class="edu-card"><div class="edu-title">Certificaciones</div><ul id="certsList"></ul></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" data-view="contact">
+            <div class="hud-corner tl"></div><div class="hud-corner tr"></div><div class="hud-corner bl"></div><div class="hud-corner br"></div>
+            <div class="panel-inner">
+              <div class="panel-head"><span class="ptag">MOD-05 //</span> ENLACES DE COMUNICACIÓN</div>
+              <div class="contact-grid" id="contactGrid"></div>
+              <div class="contact-note">base: <span class="cyan">MEDELLÍN, COLOMBIA</span> · abierto a remoto e híbrido</div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- BARRA INF. STATUS -->
+    <footer class="footer-bar">
+      <div class="fb-left"><div id="radar" class="radar"><span></span></div><span>RADAR RECLUTAMIENTO: ONLINE</span></div>
+      <div class="fb-center">CORE.HEALTH: <span class="ok">98%</span> · LATENCY <span class="ok">low</span></div>
+      <div class="fb-right">CRISTIAN TORRES · MEDELLÍN COL :: 2026</div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

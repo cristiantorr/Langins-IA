@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Cristian Torres · Full Stack Developer</title>
+  <meta name="description" content="Résumé profesional de Cristian Torres, Full Stack Developer con 10+ años." />
+  <meta name="theme-color" content="#FCFBFD" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span> CV · Cristian Torres <span class="role-pill">Full Stack</span></div>
+    <nav class="tabs">
+      <button class="tab active" data-view="profile">Perfil</button>
+      <button class="tab" data-view="experience">Experiencia</button>
+      <button class="tab" data-view="projects">Proyectos</button>
+      <button class="tab" data-view="skills">Skills</button>
+      <button class="tab" data-view="education">Educación</button>
+    </nav>
+    <span id="clock" class="clock">00:00</span>
+  </header>
+
+  <div class="resume">
+    <aside class="sidebar">
+      <div class="avatar">
+        <img id="portrait" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Retrato de Cristian Torres" />
+      </div>
+      <h1>Cristian Torres</h1>
+      <div class="role">Full Stack Developer</div>
+      <p class="bio">10+ años creando software web que genera negocio: PHP, WordPress, React y APIs REST escalables. Con base en Medellín, Colombia.</p>
+
+      <div class="side-block">
+        <h3>Contacto</h3>
+        <a href="mailto:ps4cristiantorr@gmail.com">ps4cristiantorr@gmail.com</a>
+        <a href="#">github.com/cristiantorres</a>
+        <a href="#">linkedin.com/in/cristiantorres</a>
+      </div>
+
+      <div class="side-block">
+        <h3>Idiomas</h3>
+        <div class="lang"><span>Español</span><span>Nativo</span></div>
+        <div class="lang"><span>Inglés</span><span>Profesional</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="panel active" data-panel="profile">
+        <h2>Perfil profesional</h2>
+        <p class="lede">Desarrollador <b>Full Stack</b> con <b>más de 10 años</b> de experiencia construyendo y escalando productos web.</p>
+        <p>Combino el rigor del backend (PHP, Laravel, Node) con el detalle del frontend (React, TypeScript, Tailwind) para entregar interfaces rápidas y operaciones sólidas. Especialista en WordPress y ACF PRO, con un ojo puesto en el rendimiento y la conversión.</p>
+        <h4>Logros destacados</h4>
+        <ul class="ticks">
+          <li><b>+60%</b> de rendimiento tras la auditoría y refactor de AWS/MySQL.</li>
+          <li><b>−20%</b> de carga con plugins modulares de ACF PRO.</li>
+          <li><b>10 años</b> de experiencia estable en producción real.</li>
+        </ul>
+      </section>
+
+      <section class="panel" data-panel="experience"><h2>Experiencia</h2><div id="timeline" class="timeline"></div></section>
+      <section class="panel" data-panel="projects"><h2>Proyectos</h2><div id="projGrid" class="proj-grid"></div></section>
+
+      <section class="panel" data-panel="skills">
+        <h2>Skills técnicas</h2>
+        <div id="stackGrid" class="stack-grid"></div>
+      </section>
+
+      <section class="panel" data-panel="education">
+        <h2>Educación y certificaciones</h2>
+        <div id="eduGrid" class="edu-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

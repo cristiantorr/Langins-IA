@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CT // AI ASSISTANT — Cristian Torres Full Stack Dev</title>
+  <meta name="description" content="Asistente inteligente con los datos de Cristian Torres, Full Stack Developer. Conoce su perfil en tiempo real." />
+  <meta name="theme-color" content="#0F0E08" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <div class="app">
+    <!-- BARRA SUP. -->
+    <header class="topbar">
+      <div class="brand"><span class="dot"></span> CTR // ASSISTANT v3.2</div>
+      <div class="top-status"><span class="ok">ONLINE</span> · RECLUTA-MODE</div>
+      <span id="clock" class="clock">--:--:--</span>
+    </header>
+
+    <div class="grid">
+      <!-- TELEMETRÍA (izquierda fija) -->
+      <aside class="telemetry">
+        <div class="telem-head">SISTEMA #CT-0727</div>
+        <div class="node" id="nodeStat">NODO: <span class="ok">activo</span></div>
+
+        <div class="stats">
+          <div class="stat"><span class="slab">UPTIME</span><b id="up1">0</b><b class="dsq">:</b><b id="up2">0</b><b class="dsq">:</b><b id="up3">0</b></div>
+          <div class="stat"><span class="slab">EXPERIENCIA</span><b class="big ok">10+</b><span class="small">años</span></div>
+          <div class="stat"><span class="slab">PROYECTOS</span><b class="big ok" id="projC">0</b><span class="small">entregas</span></div>
+          <div class="stat"><span class="slab">ÁREAS STACK</span><b class="big ok" id="stackC">0</b><span class="small">categorías</span></div>
+        </div>
+
+        <div class="cpu-block">
+          <div class="cpu-line"><span>CAPACIDAD_DEV</span><span id="cpuVal">0%</span></div>
+          <div class="cpu-bar"><div id="cpuFill" class="cpu-fill"></div></div>
+          <div class="mini-cells" id="cells"></div>
+        </div>
+
+        <div class="telem-foot">SEÑAL: <span class="ok">FUERTE</span> · MEDELLÍN, COL</div>
+      </aside>
+
+      <!-- ASISTENTE IA (derecha) -->
+      <main class="assistant">
+        <div class="chat-head">
+          <span class="ai-tag">AI // CRISTIAN.TORRES</span>
+          <span class="chat-hint">pulsa una acción o escribe tu consulta</span>
+        </div>
+        <div id="log" class="log" aria-live="polite"></div>
+
+        <div class="actions" id="actions">
+          <button class="act" data-cmd="resumen">RESUMEN</button>
+          <button class="act" data-cmd="stack">STACK</button>
+          <button class="act" data-cmd="proyectos">PROYECTOS</button>
+          <button class="act" data-cmd="experiencia">EXPERIENCIA</button>
+          <button class="act" data-cmd="contacto">CONTACTO</button>
+          <button class="act" data-cmd="ayuda">?</button>
+        </div>
+
+        <form id="form" class="input-row" autocomplete="off">
+          <span class="prompt">&gt;</span>
+          <input id="input" type="text" placeholder="escribe tu pregunta…" autocomplete="off" spellcheck="false" />
+          <button class="send" type="submit">ENVIAR</button>
+        </form>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

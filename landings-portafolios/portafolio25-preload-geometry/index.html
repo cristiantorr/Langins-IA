@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>▱ geometry ▱ · Cristian Torres</title>
+  <meta name="description" content="Portafolio Geometry de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#101623" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="locked">
+
+  <div class="preloader" id="preloader">
+    <div class="pl-wrap">
+      <div class="pl-hex"><span class="pl-gear"></span></div>
+      <div class="pl-line"><div class="pl-fill" id="pl-fill"></div></div>
+      <div class="pl-pct" id="pl-pct">0%</div>
+    </div>
+  </div>
+
+  <div class="backdrop" aria-hidden="true">
+    <div class="figure" style="top:4%;right:-3%;width:340px">
+      <span class="fig-cap">engranaje</span>
+      <svg viewBox="0 0 320 320">
+        <g fill="none" stroke="#F5C545" stroke-width="3">
+          <path class="fig-line" d="M160 30 l18 32 37 -7 -2 37 36 15 -24 29 24 29 -36 15 2 37 -37 -7 -18 32 -18 -32 -37 7 2 -37 -36 -15 24 -29 -24 -29 36 -15 -2 -37 37 7 Z"/>
+          <path class="fig-line" d="M160 90 a70 70 0 1 0 0.1 0"/>
+        </g>
+        <g fill="#F5C545"><circle class="fig-pt" cx="160" cy="160" r="10"/><circle class="fig-pt" cx="160" cy="30" r="6"/><circle class="fig-pt" cx="280" cy="180" r="6"/></g>
+      </svg>
+    </div>
+    <div class="figure" style="top:38%;left:-2%;width:280px">
+      <span class="fig-cap">hex</span>
+      <svg viewBox="0 0 260 240">
+        <g fill="none" stroke="#F5C545" stroke-width="3">
+          <path class="fig-line" d="M130 20 L220 70 L220 170 L130 220 L40 170 L40 70 Z"/>
+          <path class="fig-line" d="M130 20 L130 220 M40 70 L220 170 M40 170 L220 70"/>
+        </g>
+        <g fill="#22D3EE"><circle class="fig-pt" cx="130" cy="20" r="8"/><circle class="fig-pt" cx="220" cy="70" r="7"/><circle class="fig-pt" cx="40" cy="70" r="7"/><circle class="fig-pt" cx="130" cy="220" r="8"/></g>
+      </svg>
+    </div>
+    <div class="figure" style="bottom:2%;left:24%;width:260px">
+      <span class="fig-cap">compositor</span>
+      <svg viewBox="0 0 240 200">
+        <g fill="none" stroke="#F5C545" stroke-width="3">
+          <path class="fig-line" d="M20 170 L120 30 L220 170 Z"/>
+          <path class="fig-line" d="M120 30 L120 170"/>
+          <path class="fig-line" d="M70 100 L170 100"/>
+        </g>
+        <g fill="#F5C545"><circle class="fig-pt" cx="120" cy="30" r="8"/><circle class="fig-pt" cx="20" cy="170" r="7"/><circle class="fig-pt" cx="220" cy="170" r="7"/><circle class="fig-pt" cx="120" cy="170" r="6"/></g>
+      </svg>
+    </div>
+    <div class="figure" style="top:18%;left:38%;width:160px">
+      <span class="fig-cap">círculo</span>
+      <svg viewBox="0 0 140 140">
+        <g fill="none" stroke="#22D3EE" stroke-width="3">
+          <circle class="fig-line" cx="70" cy="70" r="50"/>
+          <path class="fig-line" d="M70 20 L70 120 M20 70 L120 70 M30 30 L110 110 M30 110 L110 30"/>
+        </g>
+        <g fill="#22D3EE"><circle class="fig-pt" cx="70" cy="70" r="7"/></g>
+      </svg>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="brand"><span class="ln">▰</span> cristian_torres</div>
+    <div class="links"><a href="#perfil">perfil</a><a href="#stack">stack</a><a href="#proyectos">proyectos</a><a href="#contacto">contacto</a></div>
+  </nav>
+
+  <main class="flow">
+    <section id="perfil" class="sec hero">
+      <span class="k">// 01 — perfil</span>
+      <h1>Arquitectura con <em>precisión</em> geométrica</h1>
+      <div class="hero-grid">
+        <div class="hero-body">
+          <p class="lede"><b>Cristian Torres</b> — Full Stack Developer. Cada pieza encaja: como en un engranaje, backend y frontend giran juntos. 10+ años de sistemas bien ensamblados.</p>
+          <div class="btns"><a href="#proyectos" class="btn">ver planos →</a><a href="#contacto" class="btn ghost">contactar</a></div>
+        </div>
+        <div class="photo"><img id="portrait" src="https://randomuser.me/api/portraits/men/66.jpg" alt="Cristian Torres" /></div>
+      </div>
+    </section>
+  </main>
+  <section id="stack" class="sec rv"><span class="eyebrow">// 02 — stack</span><h2>Stack.</h2><div id="stackGrid" class="grid3"></div></section>
+  <section id="proyectos" class="sec rv"><span class="eyebrow">// 03 — proyectos</span><h2>Proyectos.</h2><div id="projGrid" class="grid3"></div></section>
+  <section id="camino" class="sec rv"><span class="eyebrow">// 04 — camino</span><h2>Camino.</h2><div id="timeline" class="h"></div></section>
+  <section id="contacto" class="sec rv"><span class="eyebrow">// 05 — contacto</span><h2>Contacto.</h2><div id="contactGrid" class="grid3"></div></section>
+
+  <footer class="foot">© 2026 — medido, pulido, en su sitio.</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

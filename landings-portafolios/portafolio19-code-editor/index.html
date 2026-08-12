@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>profile.ts · Cristian Torres</title>
+  <meta name="description" content="Portafolio estilo editor de código de Cristian Torres, Full Stack Developer." />
+  <meta name="theme-color" content="#1E1E2E" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="menu">
+    <div class="menu-l"><a>Archivo</a><a>Editar</a><a>Ver</a><a>Ir</a></div>
+    <div class="menu-r">cristian <span id="clock">--:--</span></div>
+  </div>
+
+  <div class="tabsbar"><span class="tab active">profile.ts</span><span class="tab dim">stack.json</span><span class="tab dim">projects.ts</span></div>
+
+  <div class="editor" id="editor">
+    <div class="ln" id="ln"></div>
+    <div class="doc" id="doc"></div>
+  </div>
+
+  <div class="statusbar">
+    <span class="sb">⚙ TypeScript</span>
+    <span class="sb right">Ln 1, Col 1 · UTF-8 · es-CO</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
