@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollador Web Frontend | Servicios & Entretenimiento</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        nequi: '#200020',
+                        nequiAccent: '#FF007A',
+                        paypal: '#003087',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .wheel-spin {
+            transition: transform 4s cubic-bezier(0.15, 0.99, 0.18, 1);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-slate-900 text-slate-100 font-sans min-h-screen flex flex-col justify-between antialiased selection:bg-rose-500 selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR / MASCOT -->
+    <div
+        class="bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 border-b border-purple-500/20 py-2.5 px-4 text-center text-xs sm:text-sm font-medium flex items-center justify-center gap-2">
+        <span class="animate-bounce">🤖</span>
+        <span><b>Mascota Dev:</b> ¡Bienvenido! Pasa un buen rato, cotiza tu web o invítame a un café ($5.000 COP / $1
+            USD)</span>
+        <button onclick="openDonateModal()"
+            class="ml-2 bg-rose-500 hover:bg-rose-600 text-white font-bold px-2.5 py-0.5 rounded-full text-xs transition shadow-sm">
+            Donar
+        </button>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="max-w-6xl mx-auto w-full px-6 py-4 flex justify-between items-center border-b border-slate-800">
+        <div class="flex items-center gap-3">
+            <div
+                class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-rose-500 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-indigo-500/20">
+                JS
+            </div>
+            <div>
+                <h1 class="font-bold text-lg leading-tight text-white">Dev Frontend</h1>
+                <p class="text-xs text-slate-400">Disponible para proyectos</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <a href="#servicios"
+                class="hidden sm:inline-block text-xs font-semibold text-slate-300 hover:text-white transition">Servicios</a>
+            <a href="#entretenimiento"
+                class="hidden sm:inline-block text-xs font-semibold text-slate-300 hover:text-white transition">Juegos &
+                Fun</a>
+            <button onclick="openDonateModal()"
+                class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs sm:text-sm transition flex items-center gap-2 shadow-lg shadow-emerald-500/20">
+                <i class="fa-solid fa-heart text-rose-950"></i> Donar $5.000 / $1
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="max-w-4xl mx-auto px-6 pt-12 pb-8 text-center">
+        <span
+            class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-indigo-400 text-xs font-semibold mb-4">
+            🚀 Programador Web En Búsqueda de Oportunidades
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+            Desarrollo sitios web modernos y creo experiencias interactivas.
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+            Si buscas un programador para tu proyecto o negocio, ¡estoy disponible! Si solo estás de paso, diviértete
+            con los juegos y, si te gusta, apoyarme con $5.000 COP o $1 USD para un café me ayuda muchísimo.
+        </p>
+
+        <!-- TERMOMETRO DE METAS -->
+        <div
+            class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-5 max-w-lg mx-auto mb-8 text-left shadow-xl backdrop-blur-sm">
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Meta del mes: Cafés / Empanadas
+                    ☕</span>
+                <span class="text-xs font-bold text-emerald-400" id="goal-text">8 / 20 apoyos</span>
+            </div>
+            <div class="w-full bg-slate-700 h-3 rounded-full overflow-hidden">
+                <div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full rounded-full transition-all duration-1000"
+                    style="width: 40%;"></div>
+            </div>
+            <p class="text-[11px] text-slate-400 mt-2 text-center">¡Cada $5.000 COP o $1 USD hace crecer este contador!
+            </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#cotizador"
+                class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3 rounded-xl text-sm transition shadow-lg shadow-indigo-600/30">
+                Cotizar Mi Proyecto
+            </a>
+            <button onclick="openDonateModal()"
+                class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-bold px-6 py-3 rounded-xl text-sm transition">
+                Invitar un Café ($5.000 / $1)
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-5xl mx-auto px-6 py-8 space-y-16">
+
+        <!-- SECCIÓN 1: ZONA DE ENTRETENIMIENTO (RULETA & TRIQUI & AMBIENTE) -->
+        <section id="entretenimiento" class="scroll-mt-6">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-white mb-2">🎮 Zona Interactiva & Entretenimiento</h3>
+                <p class="text-slate-400 text-sm">Disfruta de estas mini herramientas mientras navegas</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- 1. RULETA DE LA SUERTE -->
+                <div
+                    class="bg-slate-800/80 border border-slate-700/70 rounded-2xl p-5 flex flex-col items-center justify-between text-center">
+                    <div>
+                        <h4 class="font-bold text-lg text-indigo-300 mb-1">🎡 Ruleta de la Suerte</h4>
+                        <p class="text-xs text-slate-400 mb-4">Gira para obtener un mensaje o sorpresa</p>
+                    </div>
+
+                    <div class="relative w-40 h-40 mb-4 flex items-center justify-center">
+                        <div id="wheel"
+                            class="w-full h-full rounded-full border-4 border-indigo-500/50 bg-gradient-to-tr from-indigo-900 via-purple-900 to-slate-900 flex items-center justify-center text-4xl shadow-inner wheel-spin">
+                            🎯
+                        </div>
+                        <div class="absolute -top-2 text-rose-500 text-2xl font-bold">▼</div>
+                    </div>
+
+                    <div id="wheel-result"
+                        class="text-xs font-semibold text-emerald-400 min-h-[32px] mb-3 flex items-center justify-center">
+                        ¡Presiona girar!
+                    </div>
+
+                    <button onclick="spinWheel()"
+                        class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 rounded-xl text-xs transition">
+                        Girar Ruleta
+                    </button>
+                </div>
+
+                <!-- 2. MINI JUEGO TRIQUI -->
+                <div
+                    class="bg-slate-800/80 border border-slate-700/70 rounded-2xl p-5 flex flex-col items-center justify-between text-center">
+                    <div>
+                        <h4 class="font-bold text-lg text-rose-300 mb-1">❌⭕ Triqui / Tres en Raya</h4>
+                        <p class="text-xs text-slate-400 mb-2">¡Juega contra la máquina!</p>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-1.5 w-36 h-36 my-2">
+                        <button onclick="makeMove(0)"
+                            class="cell bg-slate-700/80 hover:bg-slate-600 font-bold text-lg rounded text-white flex items-center justify-center"></button>
+                        <button onclick="makeMove(1)"
+                            class="cell bg-slate-700/80 hover:bg-slate-600 font-bold text-lg rounded text-white flex items-center justify-center"></button>
+                        <button onclick="makeMove(2)"
+                            class="cell bg-slate-700/80 hover:bg-slate-600 font-bold text-lg rounded text-white flex items-center justify-center"></button>
+                        <button onclick="makeMove(3)"
+                            class="cell bg-slate-700/80 hover:bg-slate-600 font-bold text-lg rounded text-white flex items-center justify-center"></button>
+                        <button onclick="makeMove(4)"
+                            class="cell bg-slate-700/80 hover:bg-slate-600 font-bold text-lg rounded text-white flex items-center justify-center"></button>
+                        <button onclick="makeMove(5)"
+                            class="cell bg-slate-700/80 hover:bg-slate-600 font-bold text-lg rounded text-white flex items-center justify-center"></button>
+                        <button onclick="makeMove(6)"
+                            class="cell bg-slate-700/80 hover:bg-slate-600 font-bold text-lg rounded text-white flex items-center justify-center"></button>
+                        <button onclick="makeMove(7)"
+                            class="cell bg-slate-700/80 hover:bg-slate-600 font-bold text-lg rounded text-white flex items-center justify-center"></button>
+                        <button onclick="makeMove(8)"
+                            class="cell bg-slate-700/80 hover:bg-slate-600 font-bold text-lg rounded text-white flex items-center justify-center"></button>
+                    </div>
+
+                    <div id="game-status" class="text-xs text-slate-300 min-h-[20px] mb-2 font-medium">Tu turno (X)
+                    </div>
+
+                    <button onclick="resetGame()"
+                        class="w-full bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold py-2 rounded-xl text-xs transition">
+                        Reiniciar Juego
+                    </button>
+                </div>
+
+                <!-- 3. SOUNDBOARD & FRASES -->
+                <div
+                    class="bg-slate-800/80 border border-slate-700/70 rounded-2xl p-5 flex flex-col justify-between text-center">
+                    <div>
+                        <h4 class="font-bold text-lg text-emerald-300 mb-1">🎧 Sonidos & Motivación</h4>
+                        <p class="text-xs text-slate-400 mb-4">Relájate o genera un consejo del día</p>
+                    </div>
+
+                    <div class="space-y-3 my-auto">
+                        <button onclick="toggleAudio('rain')" id="btn-rain"
+                            class="w-full bg-slate-700/60 hover:bg-slate-700 border border-slate-600/50 py-2 px-3 rounded-xl text-xs flex items-center justify-between text-slate-200 transition">
+                            <span>🌧️ Lluvia Relajante</span>
+                            <span class="text-[10px] bg-slate-800 px-2 py-0.5 rounded text-slate-400">Audio</span>
+                        </button>
+
+                        <div class="bg-slate-900/60 border border-slate-700/40 p-3 rounded-xl text-xs text-slate-300 italic min-h-[60px] flex items-center justify-center"
+                            id="quote-box">
+                            "Un viaje de mil millas comienza con el primer clic."
+                        </div>
+                    </div>
+
+                    <button onclick="generateQuote()"
+                        class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded-xl text-xs transition mt-3">
+                        Nueva Frase / Consejo
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: COTIZADOR INTERACTIVO DE SERVICIOS -->
+        <section id="cotizador"
+            class="bg-slate-800/90 border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-2xl scroll-mt-6">
+            <div class="text-center max-w-xl mx-auto mb-8">
+                <h3 class="text-2xl font-bold text-white mb-2">💼 Cotizador Exprés de Servicios Web</h3>
+                <p class="text-slate-400 text-sm">Selecciona lo que necesitas para tu negocio o proyecto y calcula un
+                    costo estimado en tiempo real.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Opciones -->
+                <div class="space-y-4">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300">1. Selecciona el Tipo
+                        de Trabajo:</label>
+
+                    <div class="grid grid-cols-1 gap-2.5">
+                        <label
+                            class="flex items-center gap-3 p-3 bg-slate-900/60 border border-slate-700 rounded-xl cursor-pointer hover:border-indigo-500 transition">
+                            <input type="radio" name="service" value="150000" class="accent-indigo-500" checked
+                                onchange="calculateTotal()">
+                            <div>
+                                <div class="text-sm font-bold text-white">Landing Page Sencilla</div>
+                                <div class="text-xs text-slate-400">1 página, diseño responsive, contacto</div>
+                            </div>
+                        </label>
+
+                        <label
+                            class="flex items-center gap-3 p-3 bg-slate-900/60 border border-slate-700 rounded-xl cursor-pointer hover:border-indigo-500 transition">
+                            <input type="radio" name="service" value="80000" class="accent-indigo-500"
+                                onchange="calculateTotal()">
+                            <div>
+                                <div class="text-sm font-bold text-white">Corrección de Bugs / Errores</div>
+                                <div class="text-xs text-slate-400">Arreglos de CSS, JS, HTML o responsive</div>
+                            </div>
+                        </label>
+
+                        <label
+                            class="flex items-center gap-3 p-3 bg-slate-900/60 border border-slate-700 rounded-xl cursor-pointer hover:border-indigo-500 transition">
+                            <input type="radio" name="service" value="280000" class="accent-indigo-500"
+                                onchange="calculateTotal()">
+                            <div>
+                                <div class="text-sm font-bold text-white">Sitio Web Multipágina / Completo</div>
+                                <div class="text-xs text-slate-400">Varias secciones, diseño a medida, dinamismo</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 pt-2">2. Extras
+                        Adicionales:</label>
+                    <div class="space-y-2">
+                        <label
+                            class="flex items-center gap-3 p-2.5 bg-slate-900/40 border border-slate-700/60 rounded-xl cursor-pointer hover:border-indigo-500/50 transition">
+                            <input type="checkbox" id="extra-fast" value="40000" class="accent-indigo-500"
+                                onchange="calculateTotal()">
+                            <span class="text-xs text-slate-300 font-medium">⚡ Entrega Rápida (24-48 horas)</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-3 p-2.5 bg-slate-900/40 border border-slate-700/60 rounded-xl cursor-pointer hover:border-indigo-500/50 transition">
+                            <input type="checkbox" id="extra-seo" value="30000" class="accent-indigo-500"
+                                onchange="calculateTotal()">
+                            <span class="text-xs text-slate-300 font-medium">🔍 Optimización Básica SEO y
+                                Velocidad</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Resumen y Contacto -->
+                <div
+                    class="bg-slate-900/90 border border-indigo-500/30 rounded-2xl p-6 text-center flex flex-col justify-between h-full">
+                    <div>
+                        <span class="text-xs font-bold uppercase text-indigo-400 tracking-wider">Estimado
+                            Aproximado</span>
+                        <div class="text-4xl font-extrabold text-white my-3" id="total-price">
+                            $150.000 <span class="text-xs font-normal text-slate-400">COP</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-6">
+                            *El precio final puede variar según los detalles específicos de tu requerimiento.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <a id="whatsapp-link" href="#" target="_blank"
+                            class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-3 px-4 rounded-xl text-sm transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Consultar por WhatsApp
+                        </a>
+                        <p class="text-[11px] text-slate-400">Respuesta rápida y directa sin compromiso</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: MURO DE AGRADECIMIENTO / RECONOCIMIENTO -->
+        <section id="muro" class="text-center">
+            <h3 class="text-2xl font-bold text-white mb-2">🌟 Muro de Auspiciadores & Apoyos</h3>
+            <p class="text-slate-400 text-sm max-w-lg mx-auto mb-6">Personas geniales que me han invitado a un café o
+                apoyado con $5.000 / $1 USD</p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4" id="supporters-wall">
+                <div class="bg-slate-800/60 border border-slate-700/50 p-3 rounded-xl text-left">
+                    <div class="text-xs font-bold text-indigo-400">Carlos M.</div>
+                    <div class="text-[11px] text-slate-300 italic">"¡Éxitos con tus proyectos web!"</div>
+                    <div class="text-[10px] text-slate-500 mt-1">☕ Donó $5.000</div>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700/50 p-3 rounded-xl text-left">
+                    <div class="text-xs font-bold text-indigo-400">Andrea R.</div>
+                    <div class="text-[11px] text-slate-300 italic">"Buenísima la ruleta, mucho ánimo."</div>
+                    <div class="text-[10px] text-slate-500 mt-1">☕ Donó $1 USD</div>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700/50 p-3 rounded-xl text-left">
+                    <div class="text-xs font-bold text-indigo-400">Anónimo</div>
+                    <div class="text-[11px] text-slate-300 italic">"Sigue programando bro 💪"</div>
+                    <div class="text-[10px] text-slate-500 mt-1">☕ Donó $5.000</div>
+                </div>
+                <div class="bg-slate-800/60 border border-slate-700/50 p-3 rounded-xl text-left flex items-center justify-center text-center cursor-pointer hover:bg-slate-800 transition"
+                    onclick="openDonateModal()">
+                    <span class="text-xs text-rose-400 font-bold">+ ¡Tu nombre aquí!</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 py-8 px-6 text-center text-xs text-slate-400 mt-16">
+        <p class="mb-2">Desarrollado con HTML, Tailwind CSS y JavaScript Vanilla.</p>
+        <p>¿Quieres una página como esta para tu negocio? <a href="#cotizador"
+                class="text-indigo-400 hover:underline">Escríbeme un mensaje</a>.</p>
+    </footer>
+
+    <!-- MODAL DE DONACIONES (NEQUI / PAYPAL) -->
+    <div id="donate-modal"
+        class="fixed inset-0 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-md w-full p-6 relative shadow-2xl transform scale-95 transition-transform duration-300"
+            id="modal-box">
+
+            <button onclick="closeDonateModal()"
+                class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg font-bold w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center">
+                ✕
+            </button>
+
+            <div class="text-center mb-6">
+                <div
+                    class="w-12 h-12 bg-rose-500/10 text-rose-500 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-3">
+                    ☕
+                </div>
+                <h3 class="text-xl font-bold text-white">¡Gracias por el Apoyo!</h3>
+                <p class="text-xs text-slate-400 mt-1">Tu aporte de $5.000 COP o $1 USD me ayuda a cubrir mis
+                    necesidades mientras consigo proyectos.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- NEQUI -->
+                <div class="bg-nequi/60 border border-nequiAccent/40 p-4 rounded-2xl flex items-center justify-between">
+                    <div>
+                        <span
+                            class="text-[10px] font-bold text-nequiAccent uppercase tracking-wider block">Colombia</span>
+                        <h4 class="font-extrabold text-white text-base">Nequi / Daviplata</h4>
+                        <p class="text-xs text-slate-300 mt-0.5">Número: <span class="font-mono font-bold text-white"
+                                id="nequi-number">300 000 0000</span></p>
+                    </div>
+                    <button onclick="copyNequi()" id="copy-btn"
+                        class="bg-nequiAccent hover:opacity-90 text-white font-bold text-xs px-3 py-2 rounded-xl transition">
+                        Copiar
+                    </button>
+                </div>
+
+                <!-- PAYPAL -->
+                <div class="bg-slate-800 border border-blue-500/40 p-4 rounded-2xl flex items-center justify-between">
+                    <div>
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-wider block">Internacional
+                            ($1 USD)</span>
+                        <h4 class="font-extrabold text-white text-base">PayPal</h4>
+                        <p class="text-xs text-slate-400 mt-0.5">Donación rápida en dólares</p>
+                    </div>
+                    <a href="https://paypal.me/tuusuario" target="_blank"
+                        class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-4 py-2 rounded-xl transition">
+                        Donar
+                    </a>
+                </div>
+            </div>
+
+            <p class="text-[11px] text-slate-400 text-center mt-6">
+                Si me envías un mensaje al WhatsApp después de donar, ¡agregaremos tu nombre al Muro de Auspiciadores!
+                ❤️
+            </p>
+        </div>
+    </div>
+
+    <!-- AUDIO ELEMENT (LLUVIA RELAJANTE SINTETIZADA / ONLINE) -->
+    <audio id="audio-rain" loop src="https://actions.google.com/sounds/v1/weather/rain_heavy.ogg"></audio>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- 1. MODAL DE DONACIÓN ---
+        function openDonateModal() {
+            const modal = document.getElementById('donate-modal');
+            const box = document.getElementById('modal-box');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            box.classList.remove('scale-95');
+            box.classList.add('scale-100');
+        }
+
+        function closeDonateModal() {
+            const modal = document.getElementById('donate-modal');
+            const box = document.getElementById('modal-box');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            box.classList.remove('scale-100');
+            box.classList.add('scale-95');
+        }
+
+        function copyNequi() {
+            const num = document.getElementById('nequi-number').innerText;
+            navigator.clipboard.writeText(num);
+            const btn = document.getElementById('copy-btn');
+            btn.innerText = "¡Copiado!";
+            setTimeout(() => { btn.innerText = "Copiar"; }, 2000);
+        }
+
+        // --- 2. RULETA DE LA SUERTE ---
+        const wheelResults = [
+            "✨ ¡Hoy tendrás un excelente día!",
+            "☕ El universo dice que me invites a un café.",
+            "💡 Gran idea en camino para tu negocio.",
+            "🍀 Tu número de la suerte es el 7.",
+            "🍕 Hoy se vale comer algo rico.",
+            "🎉 ¡Gracias por visitar mi página!"
+        ];
+        let currentRotation = 0;
+
+        function spinWheel() {
+            const wheel = document.getElementById('wheel');
+            const resultBox = document.getElementById('wheel-result');
+
+            currentRotation += 1440 + Math.floor(Math.random() * 360);
+            wheel.style.transform = `rotate(${currentRotation}deg)`;
+
+            resultBox.innerText = "Girando...";
+
+            setTimeout(() => {
+                const randomMsg = wheelResults[Math.floor(Math.random() * wheelResults.length)];
+                resultBox.innerText = randomMsg;
+            }, 4000);
+        }
+
+        // --- 3. JUEGO TRIQUI (TIC TAC TOE) ---
+        let board = ["", "", "", "", "", "", "", "", ""];
+        let gameActive = true;
+
+        function makeMove(index) {
+            if (board[index] === "" && gameActive) {
+                board[index] = "X";
+                renderBoard();
+                if (!checkWinner("X")) {
+                    setTimeout(botMove, 400);
+                }
+            }
+        }
+
+        function botMove() {
+            if (!gameActive) return;
+            let emptyCells = board.map((val, idx) => val === "" ? idx : null).filter(val => val !== null);
+            if (emptyCells.length > 0) {
+                let randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+                board[randomCell] = "O";
+                renderBoard();
+                checkWinner("O");
+            }
+        }
+
+        function renderBoard() {
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach((cell, idx) => {
+                cell.innerText = board[idx];
+                if (board[idx] === "X") cell.classList.add('text-indigo-400');
+                if (board[idx] === "O") cell.classList.add('text-rose-400');
+            });
+        }
+
+        function checkWinner(player) {
+            const wins = [
+                [0, 1, 2], [3, 4, 5], [6, 7, 8],
+                [0, 3, 6], [1, 4, 7], [2, 5, 8],
+                [0, 4, 8], [2, 4, 6]
+            ];
+            for (let win of wins) {
+                if (board[win[0]] === player && board[win[1]] === player && board[win[2]] === player) {
+                    gameActive = false;
+                    const status = document.getElementById('game-status');
+                    if (player === "X") {
+                        status.innerText = "¡Ganaste! 🎉 (¿Me invitas a $1 café?)";
+                        setTimeout(openDonateModal, 1200);
+                    } else {
+                        status.innerText = "¡Ganó el Bot! 🤖 Inténtalo de nuevo.";
+                    }
+                    return true;
+                }
+            }
+            if (!board.includes("")) {
+                gameActive = false;
+                document.getElementById('game-status').innerText = "¡Empate!";
+                return true;
+            }
+            return false;
+        }
+
+        function resetGame() {
+            board = ["", "", "", "", "", "", "", "", ""];
+            gameActive = true;
+            document.getElementById('game-status').innerText = "Tu turno (X)";
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach(cell => {
+                cell.innerText = "";
+                cell.classList.remove('text-indigo-400', 'text-rose-400');
+            });
+        }
+
+        // --- 4. COTIZADOR Y WHATSAPP ---
+        function calculateTotal() {
+            const servicePrice = parseInt(document.querySelector('input[name="service"]:checked').value);
+            const fastExtra = document.getElementById('extra-fast').checked ? parseInt(document.getElementById('extra-fast').value) : 0;
+            const seoExtra = document.getElementById('extra-seo').checked ? parseInt(document.getElementById('extra-seo').value) : 0;
+
+            const total = servicePrice + fastExtra + seoExtra;
+            document.getElementById('total-price').innerHTML = `$${total.toLocaleString('es-CO')} <span class="text-xs font-normal text-slate-400">COP</span>`;
+
+            // Actualizar Link de WhatsApp
+            const serviceName = document.querySelector('input[name="service"]:checked').parentElement.querySelector('.text-sm').innerText;
+            const phone = "573000000000"; // Reemplazar con tu WhatsApp
+            const msg = `Hola! Estuve viendo tu página web y coticé: ${serviceName} por un estimado de $${total.toLocaleString('es-CO')} COP. Quisiera hablar más sobre esto.`;
+            document.getElementById('whatsapp-link').href = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+        }
+        calculateTotal();
+
+        // --- 5. FRASES Y AUDIO ---
+        const quotes = [
+            "No hay nada mejor que un buen café en la mañana para empezar el día con energía.",
+            "El camino más largo siempre tiene menos tráfico. - Proverbio Chino",
+            "No cuentes los días, haz que los días cuenten. - Muhammad Ali",
+            "El único modo de hacer un gran trabajo es amar lo que haces. - Steve Jobs",
+            "Un sitio web sin visitas es como un barco en el desierto.",
+            "El mejor momento para plantar un árbol fue hace 20 años. El segundo mejor momento es ahora."
+        ];
+
+        function generateQuote() {
+            const quoteBox = document.getElementById('quote-box');
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            quoteBox.innerText = randomQuote;
+        }
+
+        function toggleAudio(id) {
+            const audio = document.getElementById('audio-' + id);
+            const btn = document.getElementById('btn-' + id);
+            if (audio.paused) {
+                audio.play();
+                btn.classList.add('border-emerald-500', 'bg-emerald-950/40');
+            } else {
+                audio.pause();
+                btn.classList.remove('border-emerald-500', 'bg-emerald-950/40');
+            }
+        }
+    </script>
+</body>
+
+</html>
