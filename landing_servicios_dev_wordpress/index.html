@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollador Web Freelance | WordPress, React & Servidores</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        nequi: '#200020',
+                        nequiAccent: '#FF007A',
+                        paypal: '#003087',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-950 border-b border-indigo-500/20 py-2 px-4 text-center text-xs font-medium flex items-center justify-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span><b>Disponible para proyectos inmediatos</b> | WordPress, React 18, Bugs PHP & Servidores</span>
+        <button onclick="openDonateModal()" class="ml-2 bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/40 font-bold px-2.5 py-0.5 rounded-full text-[11px] transition">
+            ☕ Apoyar con $5.000 / $1
+        </button>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="max-w-6xl mx-auto w-full px-6 py-5 flex justify-between items-center border-b border-slate-800/80">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-indigo-500/20">
+                &lt;/&gt;
+            </div>
+            <div>
+                <h1 class="font-bold text-lg leading-tight text-white">Dev Solutions</h1>
+                <p class="text-xs text-slate-400">WordPress & Frontend Specialist</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="#servicios" class="hidden sm:inline-block text-xs font-semibold text-slate-300 hover:text-white transition">Servicios</a>
+            <a href="#cotizador" class="hidden sm:inline-block text-xs font-semibold text-slate-300 hover:text-white transition">Cotizador</a>
+            <button onclick="openDonateModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold px-3.5 py-2 rounded-xl text-xs transition flex items-center gap-1.5">
+                <i class="fa-solid fa-mug-hot text-amber-400"></i> Café Voluntario
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="max-w-4xl mx-auto px-6 pt-12 pb-10 text-center">
+        <span class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-indigo-400 text-xs font-semibold mb-4">
+            🛠️ Especialista WordPress • React 18 • PHP • AWS / Hostinger
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+            Soluciones Web Rápidas, Limpias y a la Medida para tu Negocio.
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+            Desde la corrección urgente de un bug en PHP/WordPress hasta el desarrollo a la medida con React o ACF Pro y despliegues en servidores cloud. 
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#cotizador" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition shadow-lg shadow-indigo-600/30 flex items-center gap-2">
+                <i class="fa-solid fa-calculator"></i> Cotizar Servicio
+            </a>
+            <a href="https://wa.me/573000000000?text=Hola,%20necesito%20ayuda%20con%20un%20proyecto%20web" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition flex items-center gap-2 shadow-lg shadow-emerald-600/20">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Contacto Directo
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="max-w-5xl mx-auto px-6 py-8 space-y-16">
+
+        <!-- GRID DE SERVICIOS ESPECIALIZADOS -->
+        <section id="servicios" class="scroll-mt-6">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold text-white mb-2">⚡ Mis Servicios Especializados</h3>
+                <p class="text-slate-400 text-sm">Trabajos garantizados con código limpio, alto rendimiento y buenas prácticas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Servicio 1 -->
+                <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-brands fa-wordpress"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-white mb-2">WordPress & ACF Pro</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Desarrollo de sitios a la medida usando Advanced Custom Fields Pro. Sin dependencias de maquetadores pesados.
+                    </p>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-bug"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-white mb-2">Solución de Bugs & PHP</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Arreglos de errores de pantalla blanca, conflictos de plugins, fallos en formularios y bugs de diseño responsive.
+                    </p>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-white mb-2">Frontend React 18</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Creación de componentes interactivos, SPAs, landing pages de alta conversión y UI dinámicas con React y Tailwind.
+                    </p>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-white mb-2">Hosting & Servidores</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Configuración, migración y despliegues en Hostinger, GoDaddy o AWS. Configuración de SSL, DNS y correos.
+                    </p>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-gauge-high"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-white mb-2">Core Web Vitals & Speed</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Optimización de velocidad de carga, compresión de recursos y métricas de Google Vitals para mejor posicionamiento.
+                    </p>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h4 class="font-bold text-lg text-white mb-2">Landings con IA & Carga</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Creación ultrarrápida de páginas de aterrizaje asistidas con IA y estructuración/montaje de contenidos masivos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TERMINAL INTERACTIVA -->
+        <section class="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 font-mono text-xs max-w-3xl mx-auto shadow-2xl">
+            <div class="flex items-center gap-2 mb-3 pb-2 border-b border-slate-800 text-slate-500">
+                <span class="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                <span class="ml-2 text-[11px] text-slate-400">dev-terminal ~ status</span>
+            </div>
+            <div class="space-y-1.5 text-slate-300">
+                <p><span class="text-emerald-400">dev@portfolio:~$</span> check_stack --active</p>
+                <p class="text-slate-400">[OK] PHP 8.2 & WordPress Core loaded.</p>
+                <p class="text-slate-400">[OK] ACF Pro Custom Fields module ready.</p>
+                <p class="text-slate-400">[OK] React 18 & Tailwind CSS engine active.</p>
+                <p class="text-indigo-400">&gt; Estado: Disponible para arreglar bugs o desarrollar tu proyecto hoy.</p>
+            </div>
+        </section>
+
+        <!-- COTIZADOR EXPRÉS -->
+        <section id="cotizador" class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl scroll-mt-6">
+            <div class="text-center max-w-xl mx-auto mb-8">
+                <h3 class="text-2xl font-bold text-white mb-2">🧮 Cotizador Dinámico en Tiempo Real</h3>
+                <p class="text-slate-400 text-sm">Selecciona las necesidades de tu sitio para calcular un aproximado inmediato.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Opciones -->
+                <div class="space-y-4">
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300">1. Tipo de Trabajo Principal:</label>
+                    <div class="grid grid-cols-1 gap-2.5">
+                        <label class="flex items-center gap-3 p-3 bg-slate-950 border border-slate-800 rounded-xl cursor-pointer hover:border-indigo-500 transition">
+                            <input type="radio" name="service" value="70000" class="accent-indigo-500" checked onchange="calculateTotal()">
+                            <div>
+                                <div class="text-sm font-bold text-white">Arreglo de Bug / Error Específico</div>
+                                <div class="text-xs text-slate-400">PHP, WordPress, CSS, JS o responsive</div>
+                            </div>
+                        </label>
+
+                        <label class="flex items-center gap-3 p-3 bg-slate-950 border border-slate-800 rounded-xl cursor-pointer hover:border-indigo-500 transition">
+                            <input type="radio" name="service" value="140000" class="accent-indigo-500" onchange="calculateTotal()">
+                            <div>
+                                <div class="text-sm font-bold text-white">Landing Page Rápida / IA</div>
+                                <div class="text-xs text-slate-400">1 página optimizada para conversión</div>
+                            </div>
+                        </label>
+
+                        <label class="flex items-center gap-3 p-3 bg-slate-950 border border-slate-800 rounded-xl cursor-pointer hover:border-indigo-500 transition">
+                            <input type="radio" name="service" value="250000" class="accent-indigo-500" onchange="calculateTotal()">
+                            <div>
+                                <div class="text-sm font-bold text-white">Sitio WordPress ACF Pro / React</div>
+                                <div class="text-xs text-slate-400">Desarrollo avanzado a la medida</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 pt-2">2. Complementos Adicionales:</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center gap-3 p-2.5 bg-slate-950/60 border border-slate-800 rounded-xl cursor-pointer hover:border-indigo-500/50 transition">
+                            <input type="checkbox" id="extra-server" value="50000" class="accent-indigo-500" onchange="calculateTotal()">
+                            <span class="text-xs text-slate-300 font-medium">☁️ Montaje en Hostinger / GoDaddy / AWS</span>
+                        </label>
+                        <label class="flex items-center gap-3 p-2.5 bg-slate-950/60 border border-slate-800 rounded-xl cursor-pointer hover:border-indigo-500/50 transition">
+                            <input type="checkbox" id="extra-vitals" value="40000" class="accent-indigo-500" onchange="calculateTotal()">
+                            <span class="text-xs text-slate-300 font-medium">⚡ Optimización Vitals & Velocidad</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Resumen y Enlace -->
+                <div class="bg-slate-950/80 border border-indigo-500/30 rounded-2xl p-6 text-center flex flex-col justify-between h-full">
+                    <div>
+                        <span class="text-xs font-bold uppercase text-indigo-400 tracking-wider">Costo Estimado</span>
+                        <div class="text-4xl font-extrabold text-white my-3" id="total-price">
+                            $70.000 <span class="text-xs font-normal text-slate-400">COP</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-6">
+                            *Transparente, sin cobros ocultos.
+                        </p>
+                    </div>
+
+                    <div class="space-y-3">
+                        <a id="whatsapp-link" href="#" target="_blank" class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold py-3.5 px-4 rounded-xl text-sm transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Iniciar Consulta por WhatsApp
+                        </a>
+                        <p class="text-[11px] text-slate-400">Respuesta promedio en menos de 15 minutos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER & DONATION MODAL TRIGGER -->
+    <footer class="border-t border-slate-800 py-8 px-6 text-center text-xs text-slate-400 mt-16">
+        <p class="mb-2">Desarrollado con HTML, Tailwind CSS y JavaScript Vanilla.</p>
+        <button onclick="openDonateModal()" class="text-indigo-400 hover:underline font-semibold">
+            ¿Te sirvió la plantilla o quieres invitarme a un café? ($5.000 COP / $1 USD)
+        </button>
+    </footer>
+
+    <!-- MODAL DONACIONES -->
+    <div id="donate-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-md w-full p-6 relative shadow-2xl transform scale-95 transition-transform duration-300" id="modal-box">
+            <button onclick="closeDonateModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg font-bold w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center">
+                ✕
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-amber-500/10 text-amber-400 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-3">
+                    ☕
+                </div>
+                <h3 class="text-xl font-bold text-white">Aporte o Café Voluntario</h3>
+                <p class="text-xs text-slate-400 mt-1">Cualquier apoyo de $5.000 COP o $1 USD suma enormemente mientras sigo ofreciendo mis servicios.</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- NEQUI -->
+                <div class="bg-nequi/60 border border-nequiAccent/40 p-4 rounded-2xl flex items-center justify-between">
+                    <div>
+                        <span class="text-[10px] font-bold text-nequiAccent uppercase tracking-wider block">Colombia</span>
+                        <h4 class="font-extrabold text-white text-base">Nequi / Daviplata</h4>
+                        <p class="text-xs text-slate-300 mt-0.5">Número: <span class="font-mono font-bold text-white" id="nequi-number">300 000 0000</span></p>
+                    </div>
+                    <button onclick="copyNequi()" id="copy-btn" class="bg-nequiAccent hover:opacity-90 text-white font-bold text-xs px-3 py-2 rounded-xl transition">
+                        Copiar
+                    </button>
+                </div>
+
+                <!-- PAYPAL -->
+                <div class="bg-slate-800 border border-blue-500/40 p-4 rounded-2xl flex items-center justify-between">
+                    <div>
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-wider block">Internacional ($1 USD)</span>
+                        <h4 class="font-extrabold text-white text-base">PayPal</h4>
+                        <p class="text-xs text-slate-400 mt-0.5">Donación en dólares</p>
+                    </div>
+                    <a href="https://paypal.me/tuusuario" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-4 py-2 rounded-xl transition">
+                        Donar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function openDonateModal() {
+            document.getElementById('donate-modal').classList.remove('opacity-0', 'pointer-events-none');
+            document.getElementById('modal-box').classList.remove('scale-95');
+        }
+
+        function closeDonateModal() {
+            document.getElementById('donate-modal').classList.add('opacity-0', 'pointer-events-none');
+            document.getElementById('modal-box').classList.add('scale-95');
+        }
+
+        function copyNequi() {
+            const num = document.getElementById('nequi-number').innerText;
+            navigator.clipboard.writeText(num);
+            const btn = document.getElementById('copy-btn');
+            btn.innerText = "¡Copiado!";
+            setTimeout(() => { btn.innerText = "Copiar"; }, 2000);
+        }
+
+        function calculateTotal() {
+            const servicePrice = parseInt(document.querySelector('input[name="service"]:checked').value);
+            const serverExtra = document.getElementById('extra-server').checked ? parseInt(document.getElementById('extra-server').value) : 0;
+            const vitalsExtra = document.getElementById('extra-vitals').checked ? parseInt(document.getElementById('extra-vitals').value) : 0;
+
+            const total = servicePrice + serverExtra + vitalsExtra;
+            document.getElementById('total-price').innerHTML = `$${total.toLocaleString('es-CO')} <span class="text-xs font-normal text-slate-400">COP</span>`;
+
+            const serviceName = document.querySelector('input[name="service"]:checked').parentElement.querySelector('.text-sm').innerText;
+            const phone = "573000000000"; // Tu número de WhatsApp
+            const msg = `Hola! Estuve viendo tu página de servicios web y requiero: ${serviceName} (Estimado: $${total.toLocaleString('es-CO')} COP). Quisiera cotizar los detalles.`;
+            document.getElementById('whatsapp-link').href = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+        }
+        calculateTotal();
+    </script>
+</body>
+</html>
