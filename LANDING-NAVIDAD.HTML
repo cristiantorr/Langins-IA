@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magia Navideña Anchetas | Regalos Exclusivos y Corporativos</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              redDark: '#4A0000',
+              redMedium: '#8B0000',
+              redBright: '#C91818',
+              gold: '#D4AF37',
+              goldLight: '#FFD700',
+              goldSoft: '#F3E5AB',
+              greenPine: '#0B3D2E',
+              greenEmerald: '#0F523D',
+              whatsapp: '#25D366',
+              whatsappDark: '#128C7E',
+            }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            cursive: ['Great Vibes', 'cursive']
+          },
+          backgroundImage: {
+            'festive-pattern': "radial-gradient(circle at 50% 50%, rgba(139,0,0,0.85) 0%, rgba(74,0,0,0.98) 100%), url('https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=1920&q=80')",
+            'gold-gradient': 'linear-gradient(135deg, #FFD700 0%, #D4AF37 50%, #996515 100%)',
+            'green-gradient': 'linear-gradient(135deg, #25D366 0%, #128C7E 100%)',
+          },
+          boxShadow: {
+            'glow-gold': '0 0 25px rgba(212, 175, 55, 0.4)',
+            'glow-green': '0 0 25px rgba(37, 211, 102, 0.5)',
+            'glow-red': '0 0 25px rgba(201, 24, 24, 0.4)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Keyframe Animations */
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: 0.2;
+        transform: scale(0.8);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes pulseGlow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+      }
+
+      50% {
+        box-shadow: 0 0 35px rgba(37, 211, 102, 0.8);
+      }
+    }
+
+    .animate-twinkle {
+      animation: twinkle 3s infinite ease-in-out;
+    }
+
+    .animate-float {
+      animation: float 4s infinite ease-in-out;
+    }
+
+    .animate-pulse-glow {
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #2A0000;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #D4AF37;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FFD700;
+    }
+
+    /* Glassmorphism */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    .glass-header {
+      background: rgba(74, 0, 0, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-redDark text-slate-100 font-sans antialiased overflow-x-hidden">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div
+    class="bg-gradient-to-r from-brand-greenPine via-brand-greenEmerald to-brand-greenPine text-brand-goldSoft text-xs sm:text-sm font-semibold py-2 px-4 text-center border-b border-brand-gold/30 tracking-wide flex items-center justify-center gap-2 relative z-50">
+    <i class="fa-solid font-bold fa-holly-berry text-red-500 animate-bounce"></i>
+    <span>🎄 PEDIDOS CORPORATIVOS Y FAMILIARES ABIERTOS - Reservas anticipadas con 10% OFF hasta Dic 15 🎄</span>
+    <i class="fa-solid font-bold fa-holly-berry text-red-500 animate-bounce"></i>
+  </div>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="sticky top-0 z-40 glass-header transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <!-- LOGO -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div
+          class="w-12 h-12 rounded-full bg-gradient-to-br from-brand-gold via-amber-200 to-brand-gold flex items-center justify-center text-brand-redDark text-2xl shadow-glow-gold group-hover:scale-105 transition-transform duration-300">
+          <i class="fa-solid fa-gift"></i>
+        </div>
+        <div class="flex flex-col">
+          <span
+            class="font-cinzel text-xl sm:text-2xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-brand-goldLight via-amber-200 to-brand-gold leading-tight">
+            MAGIA NAVIDEÑA
+          </span>
+          <span class="font-cursive text-brand-goldSoft text-base -mt-1 tracking-widest">Anchetas & Detalles</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAV MENU -->
+      <nav class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide">
+        <a href="#inicio"
+          class="text-white hover:text-brand-gold transition-colors duration-200 flex items-center gap-1.5">
+          <i class="fa-solid fa-house text-brand-gold text-xs"></i> Inicio
+        </a>
+        <a href="#catalogo"
+          class="text-slate-200 hover:text-brand-gold transition-colors duration-200 flex items-center gap-1.5">
+          <i class="fa-solid fa-wine-glass text-brand-gold text-xs"></i> Anchetas
+        </a>
+        <a href="#personalizadas"
+          class="text-slate-200 hover:text-brand-gold transition-colors duration-200 flex items-center gap-1.5">
+          <i class="fa-solid fa-wand-magic-sparkles text-brand-gold text-xs"></i> Armar la Tuya
+        </a>
+        <a href="#empresas"
+          class="text-slate-200 hover:text-brand-gold transition-colors duration-200 flex items-center gap-1.5">
+          <i class="fa-solid fa-building text-brand-gold text-xs"></i> Empresas
+        </a>
+        <a href="#nosotros"
+          class="text-slate-200 hover:text-brand-gold transition-colors duration-200 flex items-center gap-1.5">
+          <i class="fa-solid fa-star text-brand-gold text-xs"></i> Garantía
+        </a>
+      </nav>
+
+      <!-- HEADER CTA BUTTON -->
+      <div class="hidden lg:flex items-center gap-3">
+        <button onclick="openCustomizerModal()"
+          class="px-4 py-2.5 rounded-full border border-brand-gold/50 text-brand-goldSoft text-xs uppercase tracking-wider font-semibold hover:bg-brand-gold/20 transition-all duration-300">
+          <i class="fa-solid fa-sliders mr-1.5"></i> Cotizador Express
+        </button>
+        <a href="https://wa.me/573001234567?text=Hola!%20Deseo%20informaci%C3%B3n%20sobre%20las%20Anchetas%20Navide%C3%B1as"
+          target="_blank" rel="noopener font-bold"
+          class="bg-gradient-to-r from-brand-whatsapp to-brand-whatsappDark hover:opacity-90 text-white font-bold px-5 py-2.5 rounded-full text-xs uppercase tracking-wider shadow-glow-green transition-all duration-300 flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span>Contactar</span>
+        </a>
+      </div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button id="mobileMenuBtn" onclick="toggleMobileMenu()"
+        class="md:hidden text-brand-gold text-2xl focus:outline-none p-2">
+        <i class="fa-solid fa-bars" id="menuIcon"></i>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU CONTAINER -->
+    <div id="mobileMenu"
+      class="hidden md:hidden bg-brand-redDark/95 border-b border-brand-gold/30 backdrop-blur-xl px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-4 font-medium text-base">
+        <a href="#inicio" onclick="toggleMobileMenu()"
+          class="text-slate-100 hover:text-brand-gold py-2 border-b border-white/5 flex items-center gap-3">
+          <i class="fa-solid fa-house text-brand-gold"></i> Inicio
+        </a>
+        <a href="#catalogo" onclick="toggleMobileMenu()"
+          class="text-slate-100 hover:text-brand-gold py-2 border-b border-white/5 flex items-center gap-3">
+          <i class="fa-solid fa-wine-glass text-brand-gold"></i> Catálogo de Anchetas
+        </a>
+        <a href="#personalizadas" onclick="toggleMobileMenu()"
+          class="text-slate-100 hover:text-brand-gold py-2 border-b border-white/5 flex items-center gap-3">
+          <i class="fa-solid fa-wand-magic-sparkles text-brand-gold"></i> Personalizadas
+        </a>
+        <a href="#empresas" onclick="toggleMobileMenu()"
+          class="text-slate-100 hover:text-brand-gold py-2 border-b border-white/5 flex items-center gap-3">
+          <i class="fa-solid fa-building text-brand-gold"></i> Pedidos Corporativos
+        </a>
+        <a href="#nosotros" onclick="toggleMobileMenu()"
+          class="text-slate-100 hover:text-brand-gold py-2 border-b border-white/5 flex items-center gap-3">
+          <i class="fa-solid fa-shield-halved text-brand-gold"></i> ¿Por qué elegirnos?
+        </a>
+        <div class="pt-4 flex flex-col gap-3">
+          <button onclick="toggleMobileMenu(); openCustomizerModal();"
+            class="w-full py-3 rounded-xl border border-brand-gold/60 text-brand-goldSoft font-bold text-center">
+            <i class="fa-solid fa-sliders mr-2"></i> Cotizar Pedido
+          </button>
+          <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20comprar%20una%20ancheta%20navide%C3%B1a"
+            target="_blank"
+            class="w-full py-3 bg-brand-whatsapp text-white font-bold rounded-xl text-center flex items-center justify-center gap-2 shadow-lg">
+            <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Directo
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="inicio"
+    class="relative min-h-[90vh] bg-festive-pattern bg-cover bg-center flex items-center justify-center py-16 px-4 overflow-hidden border-b border-brand-gold/30">
+
+    <!-- Decorative Light Bulbs / Bokeh BG Overlay -->
+    <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
+
+    <!-- Floating Holiday Sparks -->
+    <div class="absolute top-12 left-10 text-brand-goldLight text-xl animate-twinkle opacity-60"><i
+        class="fa-solid fa-sparkles"></i></div>
+    <div class="absolute top-1/3 right-12 text-brand-gold text-2xl animate-twinkle opacity-70"
+      style="animation-delay: 1s;"><i class="fa-solid fa-star"></i></div>
+    <div class="absolute bottom-20 left-1/4 text-brand-goldSoft text-lg animate-twinkle opacity-50"
+      style="animation-delay: 2s;"><i class="fa-solid fa-snowflake"></i></div>
+
+    <div class="relative max-w-6xl mx-auto text-center z-10 flex flex-col items-center">
+
+      <!-- Badge -->
+      <div
+        class="inline-flex items-center gap-2 bg-brand-gold/15 border border-brand-gold/40 rounded-full px-5 py-2 mb-6 backdrop-blur-md shadow-inner">
+        <span class="w-2.5 h-2.5 rounded-full bg-brand-gold animate-ping"></span>
+        <span class="text-brand-goldSoft text-xs sm:text-sm font-semibold uppercase tracking-widest">
+          Colección Exclusiva Navidad 2026
+        </span>
+      </div>
+
+      <!-- Main Heading -->
+      <h1
+        class="font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-none mb-6">
+        REGALOS MÁGICOS: <br />
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-brand-goldLight via-amber-200 to-brand-gold font-black drop-shadow-lg">
+          ANCHETAS NAVIDEÑAS EXCLUSIVAS
+        </span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="max-w-3xl text-slate-200 text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-10 text-shadow">
+        Celebra el espíritu de la época compartiendo experiencias inolvidables. Sorprende a tu familia, amigos y
+        colaboradores con nuestras <span class="text-brand-gold font-semibold">Anchetas Gourmet Premium</span> rellenas
+        con selecto vino, quesos madurados, chocolates artesanales y delicias navideñas.
+      </p>
+
+      <!-- Call To Actions -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+        <a href="https://wa.me/573001234567?text=Hola!%20Me%20gustar%C3%ADa%20cotizar%20anchetas%20navide%C3%B1as%20para%20esta%20temporada"
+          target="_blank" rel="noopener uppercase"
+          class="w-full sm:w-auto bg-gradient-to-r from-brand-whatsapp via-emerald-500 to-brand-whatsappDark hover:scale-105 text-white font-extrabold text-base px-8 py-4 rounded-full shadow-glow-green transition-all duration-300 flex items-center justify-center gap-3 animate-pulse-glow">
+          <i class="fa-brands fa-whatsapp text-2xl"></i>
+          <span>¡Cotiza o Pide por WhatsApp Aquí!</span>
+        </a>
+
+        <a href="#catalogo"
+          class="w-full sm:w-auto bg-brand-gold/20 hover:bg-brand-gold/30 text-brand-goldSoft font-bold border border-brand-gold/60 text-base px-8 py-4 rounded-full transition-all duration-300 flex items-center justify-center gap-2 backdrop-blur-sm">
+          <i class="fa-solid fa-gift text-brand-gold"></i>
+          <span>Ver Catálogo 2026</span>
+        </a>
+      </div>
+
+      <!-- Guarantees Banner Hero -->
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-16 pt-10 border-t border-brand-gold/20 w-full text-center">
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-truck-fast text-brand-gold text-2xl mb-2"></i>
+          <span class="text-xs sm:text-sm font-semibold text-slate-200">Envíos a Nivel Nacional</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-award text-brand-gold text-2xl mb-2"></i>
+          <span class="text-xs sm:text-sm font-semibold text-slate-200">Productos 100% Gourmet</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-ribbon text-brand-gold text-2xl mb-2"></i>
+          <span class="text-xs sm:text-sm font-semibold text-slate-200">Empaque de Lujo e Inclusiones</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <i class="fa-solid fa-building-user text-brand-gold text-2xl mb-2"></i>
+          <span class="text-xs sm:text-sm font-semibold text-slate-200">Descuentos Corporativos</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATALOG FILTER & SECTION -->
+  <section id="catalogo" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
+
+    <!-- Section Title -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="font-cursive text-brand-gold text-2xl sm:text-3xl">Colección Navideña</span>
+      <h2 class="font-cinzel text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mt-1 mb-4">
+        Nuestras Anchetas Destacadas
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent mx-auto mb-6"></div>
+      <p class="text-slate-300 text-sm sm:text-base">
+        Selecciona la opción perfecta para sorprender. Cada ancheta está ensamblada con un acabado artesanal único y
+        tarjeta navideña personalizada sin costo adicional.
+      </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-12">
+      <button onclick="filterCatalog('all')"
+        class="filter-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-brand-gold text-brand-redDark shadow-glow-gold transition-all duration-300"
+        data-filter="all">
+        Todas las Anchetas
+      </button>
+      <button onclick="filterCatalog('gourmet')"
+        class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-brand-redMedium/60 border border-brand-gold/30 text-slate-200 hover:border-brand-gold transition-all duration-300"
+        data-filter="gourmet">
+        Gourmet & Vinos
+      </button>
+      <button onclick="filterCatalog('dulce')"
+        class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-brand-redMedium/60 border border-brand-gold/30 text-slate-200 hover:border-brand-gold transition-all duration-300"
+        data-filter="dulce">
+        Dulces & Tradicionales
+      </button>
+      <button onclick="filterCatalog('corporativo')"
+        class="filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-brand-redMedium/60 border border-brand-gold/30 text-slate-200 hover:border-brand-gold transition-all duration-300"
+        data-filter="corporativo">
+        Corporativas
+      </button>
+    </div>
+
+    <!-- PRODUCT CARDS GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- CARD 1 -->
+      <div
+        class="product-card gourmet glass-card rounded-2xl overflow-hidden hover:border-brand-gold transition-all duration-300 group flex flex-col justify-between">
+        <div class="relative overflow-hidden h-64">
+          <img src="https://images.unsplash.com/photo-1513297887119-d46091b24bfa?auto=format&fit=crop&w=800&q=80"
+            alt="Ancheta Gourmet Deluxe"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div
+            class="absolute top-4 right-4 bg-brand-gold text-brand-redDark text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+            MÁS VENDIDA
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-brand-gold transition-colors">Ancheta
+                Gourmet Deluxe</h3>
+            </div>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Vino Reserva Tinto, queso madurado Manchego, jamón serrano, frutos secos importados, galletas artesanales
+              y chocolates de autor en caja de madera fina.
+            </p>
+          </div>
+          <div>
+            <div class="flex items-baseline justify-between mb-4 border-t border-white/10 pt-4">
+              <span class="text-xs text-slate-400">Precio desde:</span>
+              <span class="font-cinzel text-2xl font-black text-brand-goldLight">$220.000 COP</span>
+            </div>
+            <a href="https://wa.me/573001234567?text=Hola!%20Deseo%20ordenar%20la%20Ancheta%20Gourmet%20Deluxe"
+              target="_blank"
+              class="w-full py-3 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white font-bold rounded-xl text-center text-sm flex items-center justify-center gap-2 transition-all shadow-md">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div
+        class="product-card dulce glass-card rounded-2xl overflow-hidden hover:border-brand-gold transition-all duration-300 group flex flex-col justify-between">
+        <div class="relative overflow-hidden h-64">
+          <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=800&q=80"
+            alt="Cesta Dulce Navideña"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div
+            class="absolute top-4 right-4 bg-brand-greenEmerald text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+            FAMILIAR
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-brand-gold transition-colors">Cesta
+                Dulce Tradición</h3>
+            </div>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Panettone milanés de frutas, galletas Danesas de mantequilla, masmelos festivos, trufas de chocolate,
+              mermelada artesanal y espumoso sin alcohol.
+            </p>
+          </div>
+          <div>
+            <div class="flex items-baseline justify-between mb-4 border-t border-white/10 pt-4">
+              <span class="text-xs text-slate-400">Precio desde:</span>
+              <span class="font-cinzel text-2xl font-black text-brand-goldLight">$145.000 COP</span>
+            </div>
+            <a href="https://wa.me/573001234567?text=Hola!%20Deseo%20ordenar%20la%20Cesta%20Dulce%20Tradici%C3%B3n"
+              target="_blank"
+              class="w-full py-3 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white font-bold rounded-xl text-center text-sm flex items-center justify-center gap-2 transition-all shadow-md">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div
+        class="product-card gourmet glass-card rounded-2xl overflow-hidden hover:border-brand-gold transition-all duration-300 group flex flex-col justify-between">
+        <div class="relative overflow-hidden h-64">
+          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80"
+            alt="Kit Vinos & Charcutería"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-brand-gold transition-colors">Kit
+                Vinos & Charcutería</h3>
+            </div>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Dos botellas de vino selección especial (Tinto y Blanco), tabla de madera para quesos, salami italiano,
+              aceitunas gourmet y tostadas finas.
+            </p>
+          </div>
+          <div>
+            <div class="flex items-baseline justify-between mb-4 border-t border-white/10 pt-4">
+              <span class="text-xs text-slate-400">Precio desde:</span>
+              <span class="font-cinzel text-2xl font-black text-brand-goldLight">$280.000 COP</span>
+            </div>
+            <a href="https://wa.me/573001234567?text=Hola!%20Deseo%20ordenar%20el%20Kit%20Vinos%20y%20Charcuter%C3%ADa"
+              target="_blank"
+              class="w-full py-3 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white font-bold rounded-xl text-center text-sm flex items-center justify-center gap-2 transition-all shadow-md">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div
+        class="product-card corporativo glass-card rounded-2xl overflow-hidden hover:border-brand-gold transition-all duration-300 group flex flex-col justify-between">
+        <div class="relative overflow-hidden h-64">
+          <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=800&q=80"
+            alt="Regalo Corporativo Elegante"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div
+            class="absolute top-4 right-4 bg-brand-gold text-brand-redDark text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+            CORPORATIVO
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-brand-gold transition-colors">Regalo
+                Corporativo Elegante</h3>
+            </div>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Diseñado exclusivamente para marcas. Incluye grabado de logo corporativo en empaque, licor premium, mix de
+              nueces finas y chocolates personalizados.
+            </p>
+          </div>
+          <div>
+            <div class="flex items-baseline justify-between mb-4 border-t border-white/10 pt-4">
+              <span class="text-xs text-slate-400">Precio desde:</span>
+              <span class="font-cinzel text-2xl font-black text-brand-goldLight">$180.000 COP</span>
+            </div>
+            <a href="https://wa.me/573001234567?text=Hola!%20Me%20interesa%20el%20Regalo%20Corporativo%20Elegante"
+              target="_blank"
+              class="w-full py-3 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white font-bold rounded-xl text-center text-sm flex items-center justify-center gap-2 transition-all shadow-md">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div
+        class="product-card dulce gourmet glass-card rounded-2xl overflow-hidden hover:border-brand-gold transition-all duration-300 group flex flex-col justify-between">
+        <div class="relative overflow-hidden h-64">
+          <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=800&q=80"
+            alt="Cesta Premium Familiar"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-brand-gold transition-colors">Cesta
+                Premium Familiar</h3>
+            </div>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              La combinación gigante para compartir en el hogar: Champagne, aperitivos salados, dulces de temporada,
+              turrón español y detalles decorativos.
+            </p>
+          </div>
+          <div>
+            <div class="flex items-baseline justify-between mb-4 border-t border-white/10 pt-4">
+              <span class="text-xs text-slate-400">Precio desde:</span>
+              <span class="font-cinzel text-2xl font-black text-brand-goldLight">$350.000 COP</span>
+            </div>
+            <a href="https://wa.me/573001234567?text=Hola!%20Quiero%20solicitar%20la%20Cesta%20Premium%20Familiar"
+              target="_blank"
+              class="w-full py-3 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white font-bold rounded-xl text-center text-sm flex items-center justify-center gap-2 transition-all shadow-md">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div
+        class="product-card dulce glass-card rounded-2xl overflow-hidden hover:border-brand-gold transition-all duration-300 group flex flex-col justify-between">
+        <div class="relative overflow-hidden h-64">
+          <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80"
+            alt="Caja Navideña Mini"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+          <div
+            class="absolute top-4 right-4 bg-amber-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+            ECONÓMICA
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-brand-gold transition-colors">Caja
+                Navideña "Dulce Regalo"</h3>
+            </div>
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+              Opción compacta pero encantadora: Mini espumoso, Chocolates finos, galletas de jengibre y tarjeta navideña
+              decorativa.
+            </p>
+          </div>
+          <div>
+            <div class="flex items-baseline justify-between mb-4 border-t border-white/10 pt-4">
+              <span class="text-xs text-slate-400">Precio desde:</span>
+              <span class="font-cinzel text-2xl font-black text-brand-goldLight">$95.000 COP</span>
+            </div>
+            <a href="https://wa.me/573001234567?text=Hola!%20Deseo%20comprar%20la%20Caja%20Navide%C3%B1a%20Dulce%20Regalo"
+              target="_blank"
+              class="w-full py-3 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white font-bold rounded-xl text-center text-sm flex items-center justify-center gap-2 transition-all shadow-md">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Pedir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE "ARMAR LA TUYA" SECTION -->
+  <section id="personalizadas"
+    class="py-20 bg-gradient-to-b from-brand-redDark via-brand-redMedium to-brand-redDark border-y border-brand-gold/30 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <div>
+          <span class="font-cursive text-brand-gold text-2xl">Exclusividad a tu medida</span>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white mt-2 mb-6">
+            ¿Quieres Personalizar tu Ancheta?
+          </h2>
+          <p class="text-slate-200 text-sm sm:text-base leading-relaxed mb-6">
+            Entendemos que cada detalle cuenta. Puedes armar tu ancheta seleccionando tus bebidas favoritas, quesos,
+            chocolates, tipo de empaque (Cesta de mimbre, Caja de madera, Baúl) e incluir mensajes únicos.
+          </p>
+
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="text-sm font-medium text-slate-200">Elige el presupuesto exacto que deseas gastar.</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="text-sm font-medium text-slate-200">Adiciona tu logo o tarjetas con mensajes
+                corporativos.</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <span class="text-sm font-medium text-slate-200">Selección de licores nacionales e importados
+                certificados.</span>
+            </li>
+          </ul>
+
+          <button onclick="openCustomizerModal()"
+            class="bg-gradient-to-r from-brand-gold via-amber-200 to-brand-gold text-brand-redDark font-extrabold px-8 py-4 rounded-full text-sm uppercase tracking-wider shadow-glow-gold hover:scale-105 transition-all">
+            <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> Diseñar Ancheta Ahora
+          </button>
+        </div>
+
+        <!-- Interactive Preview Box -->
+        <div class="glass-card p-8 rounded-3xl border border-brand-gold/40 relative">
+          <div
+            class="absolute -top-4 -right-4 bg-brand-greenPine text-brand-gold border border-brand-gold/40 text-xs font-bold px-4 py-2 rounded-full">
+            ✨ Asesoría Instantánea
+          </div>
+          <h3 class="font-cinzel text-xl font-bold text-brand-goldLight mb-4 text-center">
+            Calculadora Rápida de Ancheta
+          </h3>
+
+          <form id="quickCalcForm" onsubmit="event.preventDefault(); submitQuickCalc();" class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Presupuesto aproximado por unidad:</label>
+              <select id="calcBudget"
+                class="w-full bg-brand-redDark/80 border border-brand-gold/40 rounded-xl px-4 py-3 text-sm text-slate-100 focus:outline-none focus:border-brand-gold">
+                <option value="$80.000 - $120.000 COP">$80.000 - $120.000 COP</option>
+                <option value="$120.000 - $200.000 COP">$120.000 - $200.000 COP</option>
+                <option value="$200.000 - $350.000 COP">$200.000 - $350.000 COP</option>
+                <option value="Más de $350.000 COP">Más de $350.000 COP (Alta Gama)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Cantidad estimada:</label>
+              <input type="number" id="calcQty" min="1" value="5"
+                class="w-full bg-brand-redDark/80 border border-brand-gold/40 rounded-xl px-4 py-3 text-sm text-slate-100 focus:outline-none focus:border-brand-gold"
+                placeholder="Número de unidades">
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Elemento imprescindible:</label>
+              <select id="calcMustHave"
+                class="w-full bg-brand-redDark/80 border border-brand-gold/40 rounded-xl px-4 py-3 text-sm text-slate-100 focus:outline-none focus:border-brand-gold">
+                <option value="Vino Tinto / Blanco">Vino Tinto / Blanco</option>
+                <option value="Whisky / Baileys">Whisky / Licor Premium</option>
+                <option value="Quesos y Jamón Serrano">Quesos y Jamón Serrano</option>
+                <option value="Chocolates y Dulces Finos">Chocolates y Dulces Finos</option>
+              </select>
+            </div>
+
+            <button type="submit"
+              class="w-full py-3.5 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white font-bold rounded-xl text-sm transition-all shadow-glow-green flex items-center justify-center gap-2 mt-4">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Enviar Cotización Rápida
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CORPORATE SECTION -->
+  <section id="empresas" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="glass-card rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-brand-gold/50">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+        <div class="lg:col-span-7 space-y-4">
+          <span
+            class="bg-brand-gold/20 text-brand-gold text-xs font-bold px-3 py-1 rounded-full border border-brand-gold/30 uppercase tracking-widest">
+            Soluciones Empresariales
+          </span>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-extrabold text-white">
+            Atención Especial para Empresas
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Incentiva a tus empleados y fideliza a tus clientes corporativos con regalos de alto impacto. Manejamos
+            logística masiva de entregas directas a las oficinas o casas de tus colaboradores.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="flex items-start gap-3 bg-black/20 p-3 rounded-xl border border-white/5">
+              <i class="fa-solid fa-file-invoice-dollar text-brand-gold text-xl mt-1"></i>
+              <div>
+                <h4 class="text-sm font-bold text-white">Facturación Electrónica</h4>
+                <p class="text-xs text-slate-300">Cumplimos con todos los requisitos de ley.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 bg-black/20 p-3 rounded-xl border border-white/5">
+              <i class="fa-solid fa-boxes-packing text-brand-gold text-xl mt-1"></i>
+              <div>
+                <h4 class="text-sm font-bold text-white">Descuentos por Volumen</h4>
+                <p class="text-xs text-slate-300">Tarifas preferenciales a partir de 10 unidades.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <a href="https://wa.me/573001234567?text=Hola!%20Soy%20encargado%20de%20compras%20de%20una%20empresa%20y%20requiero%20una%20cotizaci%C3%B3n%20corporativa"
+              target="_blank"
+              class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-gold to-amber-400 text-brand-redDark font-extrabold px-8 py-3.5 rounded-full text-xs uppercase tracking-wider shadow-glow-gold hover:scale-105 transition-all">
+              <i class="fa-solid fa-building"></i> Solicitar Asesoría Corporativa
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=800&q=80"
+            alt="Regalos de empresa"
+            class="rounded-2xl shadow-2xl border border-brand-gold/30 object-cover w-full h-80">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US (DIFERENCIADORES) -->
+  <section id="nosotros" class="py-16 bg-brand-redDark/80 border-t border-brand-gold/20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="font-cinzel text-3xl font-bold text-white">¿Por Qué Elegir Magia Navideña?</h2>
+        <p class="text-xs sm:text-sm text-slate-300 mt-2">Cuidamos cada detalle para que tu experiencia sea inolvidable
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="glass-card p-6 rounded-2xl text-center hover:border-brand-gold transition-all duration-300">
+          <div
+            class="w-14 h-14 bg-brand-gold/20 text-brand-gold rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <i class="fa-solid fa-truck-shield"></i>
+          </div>
+          <h3 class="font-cinzel font-bold text-lg text-white mb-2">Envíos Puntuales</h3>
+          <p class="text-xs text-slate-300">Entregas programadas con seguimiento en tiempo real para garantizar que
+            lleguen a tiempo.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl text-center hover:border-brand-gold transition-all duration-300">
+          <div
+            class="w-14 h-14 bg-brand-gold/20 text-brand-gold rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <i class="fa-solid fa-champagne-glasses"></i>
+          </div>
+          <h3 class="font-cinzel font-bold text-lg text-white mb-2">Insumos Premium</h3>
+          <p class="text-xs text-slate-300">Seleccionamos únicamente marcas reconocidas y productos frescos de la más
+            alta calidad.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl text-center hover:border-brand-gold transition-all duration-300">
+          <div
+            class="w-14 h-14 bg-brand-gold/20 text-brand-gold rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <h3 class="font-cinzel font-bold text-lg text-white mb-2">Tarjetas Gratis</h3>
+          <p class="text-xs text-slate-300">Incluimos tarjeta de felicitación personalizada con tu mensaje para el
+            destinatario.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl text-center hover:border-brand-gold transition-all duration-300">
+          <div
+            class="w-14 h-14 bg-brand-gold/20 text-brand-gold rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3 class="font-cinzel font-bold text-lg text-white mb-2">Atención 24/7</h3>
+          <p class="text-xs text-slate-300">Asesoría directa y personalizada vía WhatsApp durante toda la temporada
+            navideña.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="font-cursive text-brand-gold text-2xl">Opiniones Reales</span>
+      <h2 class="font-cinzel text-3xl font-extrabold text-white mt-1">Lo que Dicen Nuestros Clientes</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="text-brand-gold text-sm mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-200 italic mb-4">
+            "Encargamos 45 anchetas para la empresa. La calidad de los vinos y quesos fue espectacular, y la
+            presentación en madera impresionó a todo el equipo. ¡Repetiremos!"
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+          <div
+            class="w-10 h-10 rounded-full bg-brand-gold/30 font-bold text-brand-gold flex items-center justify-center">
+            CP
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Carolina Pardo</h4>
+            <span class="text-[10px] text-slate-400">Gerente de HR - TechCorp</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="text-brand-gold text-sm mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-200 italic mb-4">
+            "Compré la Cesta Dulce Tradición para mi familia. Todo llegó impecable, súper bien empacado y a tiempo en la
+            fecha solicitada. Excelente servicio por WhatsApp."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+          <div
+            class="w-10 h-10 rounded-full bg-brand-gold/30 font-bold text-brand-gold flex items-center justify-center">
+            AM
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Andrés Mendoza</h4>
+            <span class="text-[10px] text-slate-400">Cliente Familiar</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
+        <div>
+          <div class="text-brand-gold text-sm mb-3">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-200 italic mb-4">
+            "Pude personalizar la ancheta para mis suegros con el vino que a ellos les gusta. El empaque de lujo superó
+            mis expectativas. 100% recomendado."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+          <div
+            class="w-10 h-10 rounded-full bg-brand-gold/30 font-bold text-brand-gold flex items-center justify-center">
+            LG
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-white">Luisa Gómez</h4>
+            <span class="text-[10px] text-slate-400">Cliente Particular</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section class="py-16 bg-brand-redMedium/30 border-t border-brand-gold/20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-white text-center mb-8">Preguntas Frecuentes</h2>
+
+      <div class="space-y-4">
+
+        <div class="glass-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq('faq1')"
+            class="w-full p-4 text-left font-semibold text-sm sm:text-base text-white flex justify-between items-center focus:outline-none">
+            <span>¿Con cuánta anticipación debo hacer mi pedido?</span>
+            <i id="icon-faq1" class="fa-solid fa-chevron-down text-brand-gold transition-transform"></i>
+          </button>
+          <div id="faq1"
+            class="hidden px-4 pb-4 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-2">
+            Recomendamos realizar pedidos familiares con 2 a 4 días de anticipación. Para pedidos corporativos (más de
+            15 unidades), aconsejamos reservar con al menos 1 semana de antelación para garantizar disponibilidad total
+            de insumos.
+          </div>
+        </div>
+
+        <div class="glass-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq('faq2')"
+            class="w-full p-4 text-left font-semibold text-sm sm:text-base text-white flex justify-between items-center focus:outline-none">
+            <span>¿Cuáles son los medios de pago aceptados?</span>
+            <i id="icon-faq2" class="fa-solid fa-chevron-down text-brand-gold transition-transform"></i>
+          </button>
+          <div id="faq2"
+            class="hidden px-4 pb-4 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-2">
+            Aceptamos transferencias bancarias (Bancolombia, Nequi, Daviplata), tarjetas de crédito/débito y facturación
+            a 30 días para empresas registradas sujeto a verificación.
+          </div>
+        </div>
+
+        <div class="glass-card rounded-xl overflow-hidden">
+          <button onclick="toggleFaq('faq3')"
+            class="w-full p-4 text-left font-semibold text-sm sm:text-base text-white flex justify-between items-center focus:outline-none">
+            <span>¿Realizan envíos a otras ciudades?</span>
+            <i id="icon-faq3" class="fa-solid fa-chevron-down text-brand-gold transition-transform"></i>
+          </button>
+          <div id="faq3"
+            class="hidden px-4 pb-4 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-2">
+            ¡Sí! Contamos con envíos express locales y envíos nacionales asegurados para garantizar que las botellas y
+            productos delicados lleguen en perfecto estado.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black/80 border-t border-brand-gold/40 text-slate-300 pt-16 pb-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+      <!-- COL 1: LOGO & ABOUT -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div
+            class="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center text-brand-redDark text-xl font-bold">
+            <i class="fa-solid fa-gift"></i>
+          </div>
+          <span class="font-cinzel text-xl font-bold text-brand-goldLight">MAGIA NAVIDEÑA</span>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed mb-6">
+          Especialistas en crear momentos inolvidables a través de anchetas y regalos navideños de alta gama. Llevamos
+          la alegría de la Navidad directamente a tu hogar o empresa.
+        </p>
+        <div class="flex gap-3">
+          <a href="#"
+            class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-redDark flex items-center justify-center text-xs transition-colors"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="#"
+            class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-redDark flex items-center justify-center text-xs transition-colors"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"
+            class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-redDark flex items-center justify-center text-xs transition-colors"><i
+              class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <!-- COL 2: QUICK LINKS -->
+      <div>
+        <h4 class="font-cinzel text-sm font-bold text-brand-gold uppercase tracking-wider mb-4">Enlaces Rápidos</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#inicio" class="hover:text-brand-gold transition-colors">Inicio</a></li>
+          <li><a href="#catalogo" class="hover:text-brand-gold transition-colors">Anchetas Gourmet</a></li>
+          <li><a href="#personalizadas" class="hover:text-brand-gold transition-colors">Arma tu Ancheta</a></li>
+          <li><a href="#empresas" class="hover:text-brand-gold transition-colors">Atención Corporativa</a></li>
+          <li><a href="#nosotros" class="hover:text-brand-gold transition-colors">Garantía de Satisfacción</a></li>
+        </ul>
+      </div>
+
+      <!-- COL 3: CONTACT INFO -->
+      <div>
+        <h4 class="font-cinzel text-sm font-bold text-brand-gold uppercase tracking-wider mb-4">Contacto Directo</h4>
+        <ul class="space-y-3 text-xs">
+          <li class="flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-brand-whatsapp text-base"></i>
+            <span>+57 300 123 4567</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-brand-gold"></i>
+            <span>ventas@magianavidenadeanchetas.com</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-brand-gold"></i>
+            <span>Atención Nacional y Puntos de Despacho</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fa-solid fa-clock text-brand-gold"></i>
+            <span>Lun - Dom: 7:00 AM - 10:00 PM</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- COL 4: PAYMENT METHODS -->
+      <div>
+        <h4 class="font-cinzel text-sm font-bold text-brand-gold uppercase tracking-wider mb-4">Métodos de Pago</h4>
+        <p class="text-xs text-slate-400 mb-4">Recibimos todos los medios de pago para tu mayor comodidad:</p>
+        <div class="grid grid-cols-3 gap-2 text-center text-xs font-semibold">
+          <div class="bg-white/10 py-2 rounded border border-white/5">Nequi</div>
+          <div class="bg-white/10 py-2 rounded border border-white/5">Daviplata</div>
+          <div class="bg-white/10 py-2 rounded border border-white/5">Bancolombia</div>
+          <div class="bg-white/10 py-2 rounded border border-white/5">PSE</div>
+          <div class="bg-white/10 py-2 rounded border border-white/5">Visa / Mastercard</div>
+          <div class="bg-white/10 py-2 rounded border border-white/5">Efectivo</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div
+      class="max-w-7xl mx-auto border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+      <p>© 2026 Magia Navideña Anchetas. Todos los derechos reservados.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-slate-300">Términos y Condiciones</a>
+        <a href="#" class="hover:text-slate-300">Política de Privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/573001234567?text=Hola!%20Deseo%20hacer%20un%20pedido%20de%20anchetas%20navide%C3%B1as"
+    target="_blank" rel="noopener"
+    class="fixed bottom-6 right-6 z-50 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-glow-green transition-transform hover:scale-110 animate-bounce"
+    title="Hablar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- CUSTOMIZER MODAL -->
+  <div id="customizerModal"
+    class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div
+      class="glass-card bg-brand-redDark border border-brand-gold max-w-lg w-full rounded-3xl p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+      <button onclick="closeCustomizerModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <h3 class="font-cinzel text-2xl font-bold text-brand-goldLight mb-2 text-center">Cotizador Personalizado</h3>
+      <p class="text-xs text-slate-300 mb-6 text-center">Completa los datos y te enviaremos la propuesta con foto y
+        precio a tu WhatsApp.</p>
+
+      <form onsubmit="event.preventDefault(); sendModalToWhatsApp();" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Nombre Completo:</label>
+          <input type="text" id="modalName" required
+            class="w-full bg-black/40 border border-brand-gold/40 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold"
+            placeholder="Ej: María Gómez">
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Tipo de Pedido:</label>
+          <select id="modalType"
+            class="w-full bg-black/40 border border-brand-gold/40 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+            <option value="Familiar / Personal">Familiar / Personal</option>
+            <option value="Empresarial / Corporativo">Empresarial / Corporativo</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Cantidad de Anchetas:</label>
+          <input type="number" id="modalQty" min="1" value="1" required
+            class="w-full bg-black/40 border border-brand-gold/40 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-300 mb-1">Detalles o Inclusiones Especiales:</label>
+          <textarea id="modalNotes" rows="3"
+            class="w-full bg-black/40 border border-brand-gold/40 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold"
+            placeholder="Ej: Prefiero vino tinto, tarjeta para la empresa XYZ, entrega el 20 de diciembre..."></textarea>
+        </div>
+
+        <button type="submit"
+          class="w-full py-3.5 bg-brand-whatsapp hover:bg-brand-whatsappDark text-white font-bold rounded-xl text-sm transition-all shadow-glow-green flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-xl"></i> Solicitar por WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuIcon');
+      menu.classList.toggle('hidden');
+      if (menu.classList.contains('hidden')) {
+        icon.className = 'fa-solid fa-bars';
+      } else {
+        icon.className = 'fa-solid fa-xmark';
+      }
+    }
+
+    // Catalog Filter Functionality
+    function filterCatalog(category) {
+      const cards = document.querySelectorAll('.product-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+          btn.classList.add('bg-brand-gold', 'text-brand-redDark', 'shadow-glow-gold');
+          btn.classList.remove('bg-brand-redMedium/60', 'text-slate-200');
+        } else {
+          btn.classList.remove('bg-brand-gold', 'text-brand-redDark', 'shadow-glow-gold');
+          btn.classList.add('bg-brand-redMedium/60', 'text-slate-200');
+        }
+      });
+
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Accordion FAQ Toggle
+    function toggleFaq(id) {
+      const content = document.getElementById(id);
+      const icon = document.getElementById('icon-' + id);
+
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // Modal Functions
+    function openCustomizerModal() {
+      document.getElementById('customizerModal').classList.remove('hidden');
+    }
+
+    function closeCustomizerModal() {
+      document.getElementById('customizerModal').classList.add('hidden');
+    }
+
+    // Send Quick Calc to WhatsApp
+    function submitQuickCalc() {
+      const budget = document.getElementById('calcBudget').value;
+      const qty = document.getElementById('calcQty').value;
+      const mustHave = document.getElementById('calcMustHave').value;
+
+      const text = `Hola!%20Utilic%C3%A9%20la%20calculadora%20de%20anchetas:%0A- Presupuesto: ${encodeURIComponent(budget)}%0A- Cantidad: ${encodeURIComponent(qty)}%0A- Preferencia: ${encodeURIComponent(mustHave)}`;
+      window.open(`https://wa.me/573001234567?text=${text}`, '_blank');
+    }
+
+    // Send Custom Modal Data to WhatsApp
+    function sendModalToWhatsApp() {
+      const name = document.getElementById('modalName').value;
+      const type = document.getElementById('modalType').value;
+      const qty = document.getElementById('modalQty').value;
+      const notes = document.getElementById('modalNotes').value;
+
+      const text = `Hola!%20Solicito%20cotizaci%C3%B3n%20personalizada:%0A- Nombre: ${encodeURIComponent(name)}%0A- Tipo: ${encodeURIComponent(type)}%0A- Cantidad: ${encodeURIComponent(qty)}%0A- Notas: ${encodeURIComponent(notes)}`;
+      window.open(`https://wa.me/573001234567?text=${text}`, '_blank');
+      closeCustomizerModal();
+    }
+  </script>
+</body>
+
+</html>
